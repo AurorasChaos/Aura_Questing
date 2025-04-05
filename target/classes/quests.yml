@@ -1,0 +1,5398 @@
+  undead_legion:
+    id: undead_legion
+    description: §7§cThe undead rise§7 — bring down §e5000§7 as a server.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: UNDEAD
+        target_amount: 5000
+    currency: 1000
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 500
+    tier: GLOBAL
+    rarity: COMMON
+  hostile_horde:
+    id: hostile_horde
+    description: §7§cHostiles overrun the world.§7 Defeat §e8000§7 together!
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOSTILE
+        target_amount: 8000
+    currency: 1100
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 550
+    tier: GLOBAL
+    rarity: COMMON
+  zombie_infestation:
+    id: zombie_infestation
+    description: §7§aCleanse the lands§7 of §e4000 zombies§7 this month.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ZOMBIE
+        target_amount: 1000
+    currency: 950
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 480
+    tier: GLOBAL
+    rarity: COMMON
+  bone_army:
+    id: bone_army
+    description: §7§cThe skeleton army marches.§7 Break §e3000§7 of them.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SKELETON
+        target_amount: 3000
+    currency: 920
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 460
+    tier: GLOBAL
+    rarity: COMMON
+  nether_cleanup:
+    id: nether_cleanup
+    description: §7§cHeat patrol.§7 Defeat §e5 piglins§7 deep in the Nether.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PIGLIN
+        target_amount: 5
+    currency: 65
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  phantom_exorcism:
+    id: phantom_exorcism
+    description: §7§dThe skies are loud with wings.§7 Banish §e2000 phantoms§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PHANTOM
+        target_amount: 2000
+    currency: 980
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 490
+    tier: GLOBAL
+    rarity: COMMON
+  creeper_quarantine:
+    id: creeper_quarantine
+    description: §7§aToo much hissing...§7 Contain §e2500 creepers§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: CREEPER
+        target_amount: 2500
+    currency: 970
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 475
+    tier: GLOBAL
+    rarity: COMMON
+  spider_web:
+    id: spider_web
+    description: §7§cThey're crawling everywhere.§7 Remove §e3500 spiders§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SPIDER
+        target_amount: 3500
+    currency: 940
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 460
+    tier: GLOBAL
+    rarity: COMMON
+  hoglin_harvest:
+    id: hoglin_harvest
+    description: §7§cThe hoglins are thick in the forest.§7 Hunt §e3000§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOGLIN
+        target_amount: 3000
+    currency: 990
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 495
+    tier: GLOBAL
+    rarity: COMMON
+  pillager_siege:
+    id: pillager_siege
+    description: §7Villages under siege! §cRepel §e2500 pillagers§7 this month.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PILLAGER
+        target_amount: 2500
+    currency: 950
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 470
+    tier: GLOBAL
+    rarity: COMMON
+  cave_spider_crisis:
+    id: cave_spider_crisis
+    description: §7§cInfestation in the mines.§7 Eliminate §e2000 cave spiders§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: CAVE_SPIDER
+        target_amount: 2000
+    currency: 920
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 455
+    tier: GLOBAL
+    rarity: COMMON
+  slime_suppression:
+    id: slime_suppression
+    description: §7§aSwamps are overwhelmed.§7 Bounce out §e3000 slimes§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SLIME
+        target_amount: 3000
+    currency: 960
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 470
+    tier: GLOBAL
+    rarity: COMMON
+  drowned_drain:
+    id: drowned_drain
+    description: §7§9Beneath the waves, they lurk.§7 Defeat §e2500 drowned§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: DROWNED
+        target_amount: 2500
+    currency: 940
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 460
+    tier: GLOBAL
+    rarity: COMMON
+  stray_standoff:
+    id: stray_standoff
+    description: §7§bIcy nights grow longer.§7 Eliminate §e1500 strays§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: STRAY
+        target_amount: 1500
+    currency: 930
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 450
+    tier: GLOBAL
+    rarity: COMMON
+  wither_skull_campaign:
+    id: wither_skull_campaign
+    description: §7§8Hunt the bones of flame.§7 Slay §e2000 wither skeletons§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: WITHER_SKELETON
+        target_amount: 2000
+    currency: 970
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 480
+    tier: GLOBAL
+    rarity: COMMON
+  netherstorm:
+    id: netherstorm
+    description: §7§6Bring balance to chaos.§7 Defeat §e10000 nether hostiles§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOSTILE
+        target_amount: 10000
+    currency: 1100
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 550
+    tier: GLOBAL
+    rarity: COMMON
+  brute_breakers:
+    id: brute_breakers
+    description: §7§cClear the bastions.§7 Eliminate §e1500 piglin brutes§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PIGLIN_BRUTE
+        target_amount: 1500
+    currency: 1300
+    skill_points: 2
+    skill_type: COMBAT
+    skill_xp: 700
+    tier: GLOBAL
+    rarity: RARE
+  enderman_reckoning:
+    id: enderman_reckoning
+    description: §7§dStrike fear into the void.§7 Slay §e2500 endermen§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ENDERMAN
+        target_amount: 2500
+    currency: 1250
+    skill_points: 2
+    skill_type: COMBAT
+    skill_xp: 680
+    tier: GLOBAL
+    rarity: RARE
+  vex_eviction:
+    id: vex_eviction
+    description: §7§5Silence the skies.§7 Destroy §e1800 vexes§7 across raids.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: VEX
+        target_amount: 1800
+    currency: 1280
+    skill_points: 2
+    skill_type: COMBAT
+    skill_xp: 690
+    tier: GLOBAL
+    rarity: RARE
+  phantom_banisher:
+    id: phantom_banisher
+    description: §7§dThe long night ends.§7 Hunt §e3000 phantoms§7 together.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PHANTOM
+        target_amount: 3000
+    currency: 1270
+    skill_points: 2
+    skill_type: COMBAT
+    skill_xp: 685
+    tier: GLOBAL
+    rarity: RARE
+  blaze_meltdown:
+    id: blaze_meltdown
+    description: §7§6Shut down the blaze factories.§7 Defeat §e2500 blazes§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BLAZE
+        target_amount: 2500
+    currency: 1290
+    skill_points: 2
+    skill_type: COMBAT
+    skill_xp: 695
+    tier: GLOBAL
+    rarity: RARE
+  wither_watch:
+    id: wither_watch
+    description: §7§8Dark bones.§7 Take out §e2 wither skeletons§7 today.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: WITHER_SKELETON
+        target_amount: 2
+    currency: 70
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 50
+    tier: DAILY
+    rarity: RARE
+  nether_domination:
+    id: nether_domination
+    description: §7§l§6Command the Nether.§r§7 Defeat §e20000 hostiles§7 this month.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOSTILE
+        target_amount: 20000
+    currency: 2000
+    skill_points: 3
+    skill_type: COMBAT
+    skill_xp: 1200
+    tier: GLOBAL
+    rarity: LEGENDARY
+  boss_slayer:
+    id: boss_slayer
+    description: §7§l§cNo mercy.§r§7 Together, defeat §e10 boss mobs§7 this month.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BOSS
+        target_amount: 10
+    currency: 2500
+    skill_points: 3
+    skill_type: COMBAT
+    skill_xp: 1500
+    tier: GLOBAL
+    rarity: LEGENDARY
+  apple_a_day:
+    id: apple_a_day
+    description: §7§aKeep the doctor away!§7 Gather §e5 apples§7 from trees.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: APPLE
+        target_amount: 5
+    currency: 50
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  wood_chopper:
+    id: wood_chopper
+    description: §7§6Chop chop!§7 Collect §e32 oak logs§7 for building.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: OAK_LOG
+        target_amount: 32
+    currency: 55
+    skill_points: 1
+    skill_type: WOODCUTTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  stone_stack:
+    id: stone_stack
+    description: §7§8Chip away.§7 Mine §e64 stone blocks§7 today.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: STONE
+        target_amount: 64
+    currency: 55
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  sugar_harvest:
+    id: sugar_harvest
+    description: §7§aSweet find!§7 Collect §e20 sugar cane§7 from riversides.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: SUGAR_CANE
+        target_amount: 20
+    currency: 50
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  feather_finder:
+    id: feather_finder
+    description: §7§fLight as air.§7 Gather §e10 feathers§7 from chickens.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: FEATHER
+        target_amount: 10
+    currency: 55
+    skill_points: 1
+    skill_type: HUNTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  sand_shovel:
+    id: sand_shovel
+    description: §7§eFeeling gritty?§7 Gather §e40 sand§7 from the desert.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: SAND
+        target_amount: 40
+    currency: 50
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  carrot_collection:
+    id: carrot_collection
+    description: §7§aBugs Bunny would be proud.§7 Collect §e20 carrots§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: CARROT
+        target_amount: 20
+    currency: 55
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  leather_haul:
+    id: leather_haul
+    description: §7§6Rugged and ready.§7 Gather §e8 leather§7 from cattle.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: LEATHER
+        target_amount: 8
+    currency: 60
+    skill_points: 1
+    skill_type: HUNTING
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  egg_basket:
+    id: egg_basket
+    description: §7§fBreakfast prep!§7 Gather §e6 eggs§7 from hens.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: EGG
+        target_amount: 6
+    currency: 50
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  ink_run:
+    id: ink_run
+    description: §7§0Black and slimy.§7 Gather §e10 ink sacs§7 from squids.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: INK_SAC
+        target_amount: 10
+    currency: 55
+    skill_points: 1
+    skill_type: HUNTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  string_thing:
+    id: string_thing
+    description: §7§fUseful for bows and more.§7 Collect §e12 string§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: STRING
+        target_amount: 12
+    currency: 55
+    skill_points: 1
+    skill_type: COMBAT
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  wheat_bundle:
+    id: wheat_bundle
+    description: §7§eGolden harvest.§7 Gather §e30 wheat§7 from your farm.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: WHEAT
+        target_amount: 30
+    currency: 55
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  coal_collection:
+    id: coal_collection
+    description: §7§8Fuel up.§7 Mine §e20 coal§7 for smelting duties.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: COAL
+        target_amount: 20
+    currency: 55
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  melon_haul:
+    id: melon_haul
+    description: §7§aFresh and fruity!§7 Gather §e10 melons§7 from the garden.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: MELON
+        target_amount: 10
+    currency: 50
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  potato_pick:
+    id: potato_pick
+    description: §7§aCrispy potential.§7 Harvest §e20 potatoes§7 from the field.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: POTATO
+        target_amount: 20
+    currency: 50
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  ancient_minerals:
+    id: ancient_minerals
+    description: §7§8Deep within the earth lies treasure.§7 Mine §e300 iron ore§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: IRON_ORE
+        target_amount: 300
+    currency: 250
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 140
+    tier: WEEKLY
+    rarity: COMMON
+  swamp_harvest:
+    id: swamp_harvest
+    description: §7§aGather §e200 lily pads§7 for potions and décor.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: LILY_PAD
+        target_amount: 200
+    currency: 240
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: COMMON
+  carrot_craze:
+    id: carrot_craze
+    description: §7§aThe rabbits are hungry!§7 Collect §e300 carrots§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: CARROT
+        target_amount: 300
+    currency: 230
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: COMMON
+  nether_shard:
+    id: nether_shard
+    description: §7§cExplore the Nether§7 and gather §e150 nether quartz§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: NETHER_QUARTZ
+        target_amount: 150
+    currency: 260
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 150
+    tier: WEEKLY
+    rarity: COMMON
+  feather_feud:
+    id: feather_feud
+    description: §7§fMake arrows fly.§7 Gather §e100 feathers§7 for fletching.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: FEATHER
+        target_amount: 100
+    currency: 220
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 115
+    tier: WEEKLY
+    rarity: COMMON
+  salmon_sweep:
+    id: salmon_sweep
+    description: §7§bFreshwater bounty!§7 Catch §e80 salmon§7 from rivers.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: SALMON
+        target_amount: 80
+    currency: 240
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: COMMON
+  melon_march:
+    id: melon_march
+    description: §7§aHealthy snacks incoming!§7 Gather §e200 melons§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: MELON
+        target_amount: 200
+    currency: 230
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 125
+    tier: WEEKLY
+    rarity: COMMON
+  glowstone_glory:
+    id: glowstone_glory
+    description: §7§eBrighten your world!§7 Gather §e100 glowstone dust§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: GLOWSTONE_DUST
+        target_amount: 100
+    currency: 245
+    skill_points: 1
+    skill_type: EXCAVATION
+    skill_xp: 135
+    tier: WEEKLY
+    rarity: COMMON
+  mushroom_mix:
+    id: mushroom_mix
+    description: §7§cRed or brown?§7 Gather §e150 mushrooms§7 of either type.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: RED_MUSHROOM
+        target_amount: 75
+    currency: 220
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: COMMON
+  obsidian_order:
+    id: obsidian_order
+    description: §7§8A tool for portals and enchantment.§7 Gather §e50 obsidian§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: OBSIDIAN
+        target_amount: 50
+    currency: 260
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 145
+    tier: WEEKLY
+    rarity: COMMON
+  ancient_treasures:
+    id: ancient_treasures
+    description: §7§6Unearth the forgotten.§7 Gather §e5000 gold ingots§7 as a server.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: GOLD_INGOT
+        target_amount: 5000
+    currency: 1200
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  nether_crystals:
+    id: nether_crystals
+    description: §7§cBright, burning shards.§7 Collect §e3000 nether quartz§7 together.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: NETHER_QUARTZ
+        target_amount: 3000
+    currency: 1150
+    skill_points: 1
+    skill_type: EXCAVATION
+    skill_xp: 570
+    tier: GLOBAL
+    rarity: COMMON
+  harvest_festival:
+    id: harvest_festival
+    description: §7§aLet the fields thrive.§7 Gather §e10000 wheat§7 for the server
+      stores.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: WHEAT
+        target_amount: 10000
+    currency: 1250
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 620
+    tier: GLOBAL
+    rarity: COMMON
+  fishing_feast:
+    id: fishing_feast
+    description: §7§bKeep casting.§7 Gain §e300 Fishing XP§7 this week.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: FISHING
+        target_amount: 300
+    currency: 190
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  endless_bark:
+    id: endless_bark
+    description: §7§6Fuel for builders.§7 Gather §e7500 oak logs§7 as a server.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: OAK_LOG
+        target_amount: 7500
+    currency: 1220
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 610
+    tier: GLOBAL
+    rarity: COMMON
+  glowstone_drive:
+    id: glowstone_drive
+    description: §7§eIlluminate the world.§7 Collect §e5000 glowstone dust§7 together.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: GLOWSTONE_DUST
+        target_amount: 5000
+    currency: 1190
+    skill_points: 1
+    skill_type: EXCAVATION
+    skill_xp: 590
+    tier: GLOBAL
+    rarity: COMMON
+  wool_gathering:
+    id: wool_gathering
+    description: §7§fBlankets for all!§7 Collect §e3500 white wool§7 from sheep.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: WHITE_WOOL
+        target_amount: 3500
+    currency: 1170
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 580
+    tier: GLOBAL
+    rarity: COMMON
+  leather_stockpile:
+    id: leather_stockpile
+    description: §7§6For armor, books, and trade.§7 Gather §e3000 leather§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: LEATHER
+        target_amount: 3000
+    currency: 1210
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  carrot_crate:
+    id: carrot_crate
+    description: §7§aA vitamin-rich endeavor!§7 Collect §e8000 carrots§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: CARROT
+        target_amount: 8000
+    currency: 1160
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 570
+    tier: GLOBAL
+    rarity: COMMON
+  string_stash:
+    id: string_stash
+    description: §7§fThread for all needs.§7 Collect §e4500 string§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: STRING
+        target_amount: 4500
+    currency: 1180
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 585
+    tier: GLOBAL
+    rarity: COMMON
+  nether_bricks_bulk:
+    id: nether_bricks_bulk
+    description: §7§cBuild with infernal strength.§7 Gather §e6000 nether bricks§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: NETHER_BRICK
+        target_amount: 6000
+    currency: 1230
+    skill_points: 1
+    skill_type: EXCAVATION
+    skill_xp: 620
+    tier: GLOBAL
+    rarity: COMMON
+  obsidian_mountain:
+    id: obsidian_mountain
+    description: §7§8The hardest stone.§7 Collect §e2000 obsidian§7 blocks.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: OBSIDIAN
+        target_amount: 2000
+    currency: 1260
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 650
+    tier: GLOBAL
+    rarity: COMMON
+  redstone_network:
+    id: redstone_network
+    description: §7§cPower every contraption.§7 Collect §e8000 redstone§7 dust.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: REDSTONE
+        target_amount: 8000
+    currency: 1240
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 640
+    tier: GLOBAL
+    rarity: COMMON
+  sugar_surge:
+    id: sugar_surge
+    description: §7§aSweet enough for everyone!§7 Gather §e7000 sugar cane§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: SUGAR_CANE
+        target_amount: 7000
+    currency: 1150
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 580
+    tier: GLOBAL
+    rarity: COMMON
+  bookshelf_bounty:
+    id: bookshelf_bounty
+    description: §7§bFuel the libraries.§7 Collect §e2000 books§7 as a server.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: BOOK
+        target_amount: 2000
+    currency: 1250
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 620
+    tier: GLOBAL
+    rarity: COMMON
+  rabbit_foot_raid:
+    id: rabbit_foot_raid
+    description: §7§dRare and lucky.§7 Collect §e1000 rabbit feet§7 for alchemy.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: RABBIT_FOOT
+        target_amount: 1000
+    currency: 1400
+    skill_points: 2
+    skill_type: ALCHEMY
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  sea_lantern_supply:
+    id: sea_lantern_supply
+    description: §7§bLight the deep.§7 Gather §e1200 sea lanterns§7 from ocean monuments.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: SEA_LANTERN
+        target_amount: 1200
+    currency: 1380
+    skill_points: 2
+    skill_type: FISHING
+    skill_xp: 790
+    tier: GLOBAL
+    rarity: RARE
+  scute_stash:
+    id: scute_stash
+    description: §7§aHelp baby turtles grow!§7 Collect §e800 scutes§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: SCUTE
+        target_amount: 800
+    currency: 1350
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 760
+    tier: GLOBAL
+    rarity: RARE
+  chorus_cache:
+    id: chorus_cache
+    description: §7§dEnd delicacies.§7 Harvest §e3000 chorus fruit§7 from End islands.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: CHORUS_FRUIT
+        target_amount: 3000
+    currency: 1370
+    skill_points: 2
+    skill_type: FARMING
+    skill_xp: 780
+    tier: GLOBAL
+    rarity: RARE
+  honey_horde:
+    id: honey_horde
+    description: §7§6Buzz buzz.§7 Gather §e2500 honey bottles§7 from bee farms.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: HONEY_BOTTLE
+        target_amount: 2500
+    currency: 1390
+    skill_points: 2
+    skill_type: FARMING
+    skill_xp: 795
+    tier: GLOBAL
+    rarity: RARE
+  ancient_scrolls:
+    id: ancient_scrolls
+    description: §7§l§6Wisdom preserved.§r§7 Gather §e500 enchanted books§7 as a server.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: ENCHANTED_BOOK
+        target_amount: 500
+    currency: 2000
+    skill_points: 3
+    skill_type: ENCHANTING
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  dragon_essence:
+    id: dragon_essence
+    description: §7§l§5Rare as the void.§r§7 Collect §e150 dragon breath§7 together.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: DRAGON_BREATH
+        target_amount: 150
+    currency: 2200
+    skill_points: 3
+    skill_type: ALCHEMY
+    skill_xp: 1400
+    tier: GLOBAL
+    rarity: LEGENDARY
+  totem_trade:
+    id: totem_trade
+    description: §7§l§eSurvival trinkets.§r§7 Gather §e300 totems of undying§7.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: TOTEM_OF_UNDYING
+        target_amount: 300
+    currency: 2100
+    skill_points: 3
+    skill_type: DEFENSE
+    skill_xp: 1350
+    tier: GLOBAL
+    rarity: LEGENDARY
+  beacon_build:
+    id: beacon_build
+    description: §7§l§bPower the world.§r§7 Collect §e100 beacons§7 for the community.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: BEACON
+        target_amount: 100
+    currency: 2300
+    skill_points: 3
+    skill_type: MINING
+    skill_xp: 1500
+    tier: GLOBAL
+    rarity: LEGENDARY
+  turtle_time:
+    id: turtle_time
+    description: §7§aBeachside boom.§7 Collect §e500 turtle eggs§7 safely.
+    objectives:
+      objective1:
+        type: GATHER_ITEM
+        target_key: TURTLE_EGG
+        target_amount: 500
+    currency: 1450
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 850
+    tier: GLOBAL
+    rarity: RARE
+  torch_time:
+    id: torch_time
+    description: §7§eLight it up!§7 Place §e20 torches§7 in dark places.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: TORCH
+        target_amount: 20
+    currency: 55
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  bread_baking:
+    id: bread_baking
+    description: §7§aFill your hunger bar!§7 Craft §e10 loaves of bread§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: BREAD
+        target_amount: 10
+    currency: 55
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  arrow_assembly:
+    id: arrow_assembly
+    description: §7§fStay sharp.§7 Craft §e20 arrows§7 for your next hunt.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: ARROW
+        target_amount: 20
+    currency: 60
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  ladder_lines:
+    id: ladder_lines
+    description: §7§eReach new heights.§7 Craft §e12 ladders§7 for quick climbs.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: LADDER
+        target_amount: 12
+    currency: 50
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  pickaxe_production:
+    id: pickaxe_production
+    description: §7§8Tools of the trade.§7 Craft §e3 stone pickaxes§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: STONE_PICKAXE
+        target_amount: 3
+    currency: 55
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  fence_factory:
+    id: fence_factory
+    description: §7§6Secure your land.§7 Craft §e16 oak fences§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: OAK_FENCE
+        target_amount: 16
+    currency: 55
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  bucket_batch:
+    id: bucket_batch
+    description: §7§8Iron for essentials.§7 Craft §e3 buckets§7 today.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: BUCKET
+        target_amount: 3
+    currency: 60
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  book_bindery:
+    id: book_bindery
+    description: §7§bFor knowledge and enchantments.§7 Craft §e5 books§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: BOOK
+        target_amount: 5
+    currency: 60
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  breadline_bonus:
+    id: breadline_bonus
+    description: §7§eKeep the people fed.§7 Bake another §e15 loaves§7 of bread.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: BREAD
+        target_amount: 15
+    currency: 60
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  shield_forge:
+    id: shield_forge
+    description: §7§cArm up!§7 Craft §e2 shields§7 to block incoming attacks.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: SHIELD
+        target_amount: 2
+    currency: 60
+    skill_points: 1
+    skill_type: DEFENSE
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  hoe_crafting:
+    id: hoe_crafting
+    description: §7§aFarm prep in progress.§7 Craft §e3 stone hoes§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: STONE_HOE
+        target_amount: 3
+    currency: 55
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  fishing_kit:
+    id: fishing_kit
+    description: §7§bReel ‘em in.§7 Craft §e2 fishing rods§7 today.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: FISHING_ROD
+        target_amount: 2
+    currency: 60
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  helmet_day:
+    id: helmet_day
+    description: §7§8Safety first.§7 Craft §e2 iron helmets§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: IRON_HELMET
+        target_amount: 2
+    currency: 60
+    skill_points: 1
+    skill_type: DEFENSE
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  paper_stack:
+    id: paper_stack
+    description: §7§fWrite your legacy.§7 Craft §e30 paper§7 sheets.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: PAPER
+        target_amount: 30
+    currency: 55
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  rail_maker:
+    id: rail_maker
+    description: §7§eLay down the tracks.§7 Craft §e24 rails§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: RAIL
+        target_amount: 24
+    currency: 60
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  redstone_tools:
+    id: redstone_tools
+    description: §7§cGet technical.§7 Craft §e4 redstone torches§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: REDSTONE_TORCH
+        target_amount: 4
+    currency: 55
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  trapdoor_work:
+    id: trapdoor_work
+    description: §7§6Subtle entries.§7 Craft §e6 oak trapdoors§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: OAK_TRAPDOOR
+        target_amount: 6
+    currency: 55
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  composter_day:
+    id: composter_day
+    description: §7§aTurn scraps into soil.§7 Craft §e2 composters§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: COMPOSTER
+        target_amount: 2
+    currency: 55
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  firecharge_forge:
+    id: firecharge_forge
+    description: §7§cLight it up.§7 Craft §e4 fire charges§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: FIRE_CHARGE
+        target_amount: 4
+    currency: 60
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  clockwork:
+    id: clockwork
+    description: §7§eTime is ticking.§7 Craft §e1 clock§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: CLOCK
+        target_amount: 1
+    currency: 65
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  cauldron_craze:
+    id: cauldron_craze
+    description: §7§9Brew prep time.§7 Craft §e1 cauldron§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: CAULDRON
+        target_amount: 1
+    currency: 65
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  potion_stand_day:
+    id: potion_stand_day
+    description: §7§dGet mystical.§7 Craft §e1 brewing stand§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: BREWING_STAND
+        target_amount: 1
+    currency: 65
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  enchant_table_day:
+    id: enchant_table_day
+    description: §7§bPower in books.§7 Craft §e1 enchanting table§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: ENCHANTING_TABLE
+        target_amount: 1
+    currency: 70
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 50
+    tier: DAILY
+    rarity: RARE
+  golden_apple_forge:
+    id: golden_apple_forge
+    description: §7§6A powerful bite.§7 Craft §e1 golden apple§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: GOLDEN_APPLE
+        target_amount: 1
+    currency: 80
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 60
+    tier: DAILY
+    rarity: LEGENDARY
+  armor_forge_week:
+    id: armor_forge_week
+    description: §7§8Prepare your warriors.§7 Craft §e10 iron chestplates§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: IRON_CHESTPLATE
+        target_amount: 10
+    currency: 200
+    skill_points: 1
+    skill_type: DEFENSE
+    skill_xp: 110
+    tier: WEEKLY
+    rarity: COMMON
+  anvil_stock:
+    id: anvil_stock
+    description: §7§6Repair is key.§7 Craft §e5 anvils§7 for the base.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: ANVIL
+        target_amount: 5
+    currency: 230
+    skill_points: 2
+    skill_type: MINING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  powered_rails:
+    id: powered_rails
+    description: §7§eZoom around!§7 Craft §e50 powered rails§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: POWERED_RAIL
+        target_amount: 50
+    currency: 220
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: COMMON
+  brew_block_build:
+    id: brew_block_build
+    description: §7§dMystic expansion.§7 Craft §e10 brewing stands§7 this week.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: BREWING_STAND
+        target_amount: 10
+    currency: 260
+    skill_points: 2
+    skill_type: ALCHEMY
+    skill_xp: 145
+    tier: WEEKLY
+    rarity: RARE
+  library_push:
+    id: library_push
+    description: §7§bExpand the archives.§7 Craft §e30 bookshelves§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: BOOKSHELF
+        target_amount: 30
+    currency: 250
+    skill_points: 2
+    skill_type: ENCHANTING
+    skill_xp: 140
+    tier: WEEKLY
+    rarity: RARE
+  beacon_forging:
+    id: beacon_forging
+    description: §7§l§6Signal strength.§r§7 Craft §e100 beacons§7 across the realm.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: BEACON
+        target_amount: 100
+    currency: 2500
+    skill_points: 3
+    skill_type: MINING
+    skill_xp: 1500
+    tier: GLOBAL
+    rarity: LEGENDARY
+  golden_feast:
+    id: golden_feast
+    description: §7§l§6Sustain the kingdom.§r§7 Craft §e300 golden apples§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: GOLDEN_APPLE
+        target_amount: 300
+    currency: 2400
+    skill_points: 3
+    skill_type: ALCHEMY
+    skill_xp: 1400
+    tier: GLOBAL
+    rarity: LEGENDARY
+  railway_expansion:
+    id: railway_expansion
+    description: §7§eConnect the world.§7 Craft §e2000 rails§7 together.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: RAIL
+        target_amount: 2000
+    currency: 1900
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 1100
+    tier: GLOBAL
+    rarity: RARE
+  scroll_scribes:
+    id: scroll_scribes
+    description: §7§bPreserve knowledge.§7 Craft §e1500 books§7 across the realm.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: BOOK
+        target_amount: 1500
+    currency: 2000
+    skill_points: 2
+    skill_type: ENCHANTING
+    skill_xp: 1200
+    tier: GLOBAL
+    rarity: RARE
+  tool_forge:
+    id: tool_forge
+    description: §7§8Equip everyone.§7 Craft §e500 diamond pickaxes§7.
+    objectives:
+      objective1:
+        type: CRAFT_ITEM
+        target_key: DIAMOND_PICKAXE
+        target_amount: 500
+    currency: 2100
+    skill_points: 3
+    skill_type: MINING
+    skill_xp: 1350
+    tier: GLOBAL
+    rarity: LEGENDARY
+  step_sprinter:
+    id: step_sprinter
+    description: §7§aGet those steps in!§7 Walk §e500 blocks§7 today.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 500
+    currency: 50
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  path_pacer:
+    id: path_pacer
+    description: §7§eStretch your legs.§7 Walk §e750 blocks§7 before sundown.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 750
+    currency: 55
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  mountain_march:
+    id: mountain_march
+    description: §7§fClimb high!§7 Walk §e300 blocks§7 uphill.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 300
+    currency: 60
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  speedy_stepper:
+    id: speedy_stepper
+    description: §7§aNo time to waste.§7 Walk §e1000 blocks§7 in one go.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 1000
+    currency: 70
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  adventurers_path:
+    id: adventurers_path
+    description: §7§6The journey begins.§7 Walk §e2000 blocks§7 today.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 2000
+    currency: 90
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 60
+    tier: DAILY
+    rarity: LEGENDARY
+  trailblazer:
+    id: trailblazer
+    description: §7§aForge new paths.§7 Walk §e5000 blocks§7 this week.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 5000
+    currency: 150
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  pilgrimage:
+    id: pilgrimage
+    description: §7§eEvery journey matters.§7 Walk §e10000 blocks§7.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 10000
+    currency: 170
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  step_master:
+    id: step_master
+    description: §7§6You're going places.§7 Walk §e20000 blocks§7 this week.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 20000
+    currency: 220
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  marathoner:
+    id: marathoner
+    description: §7§bOn and on you go.§7 Walk §e30000 blocks§7.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 30000
+    currency: 250
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 150
+    tier: WEEKLY
+    rarity: RARE
+  heroic_stride:
+    id: heroic_stride
+    description: §7§l§aWalk like a legend.§r§7 Traverse §e50000 blocks§7 in a week.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 50000
+    currency: 300
+    skill_points: 3
+    skill_type: AGILITY
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  worldwalker:
+    id: worldwalker
+    description: §7§aEveryone moves.§7 Together, walk §e500000 blocks§7.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 500000
+    currency: 1200
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  server_march:
+    id: server_march
+    description: §7§6The march continues.§7 Walk §e1000000 blocks§7 as a team.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 1000000
+    currency: 1500
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  endless_journey:
+    id: endless_journey
+    description: §7§l§bNo rest.§r§7 Walk §e2500000 blocks§7 across the realm.
+    objectives:
+      objective1:
+        type: WALK_DISTANCE
+        target_key: ANY
+        target_amount: 2500000
+    currency: 2000
+    skill_points: 3
+    skill_type: AGILITY
+    skill_xp: 1200
+    tier: GLOBAL
+    rarity: LEGENDARY
+  desert_stroll:
+    id: desert_stroll
+    description: §7§eFeel the heat.§7 Explore a §eDesert biome§7 today.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: DESERT
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  taiga_trip:
+    id: taiga_trip
+    description: §7§bBundle up.§7 Visit a §eTaiga biome§7 before nightfall.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: TAIGA
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  swamp_walk:
+    id: swamp_walk
+    description: §7§aWatch your step!§7 Walk through a §eSwamp biome§7 today.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: SWAMP
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  forest_trek:
+    id: forest_trek
+    description: §7§2Among the trees.§7 Enter a §eForest biome§7.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: FOREST
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  badlands_bound:
+    id: badlands_bound
+    description: §7§6Adventure awaits.§7 Reach a §eBadlands biome§7.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: BADLANDS
+        target_amount: 1
+    currency: 70
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  five_biome_tour:
+    id: five_biome_tour
+    description: §7§aTour the world.§7 Explore §e5 different biomes§7 this week.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: ANY
+        target_amount: 5
+    currency: 150
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  cold_front:
+    id: cold_front
+    description: §7§bInto the chill.§7 Visit a §eSnowy biome§7 this week.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: SNOWY_TUNDRA
+        target_amount: 1
+    currency: 160
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  nether_scout:
+    id: nether_scout
+    description: §7§cVenture into heat.§7 Explore §e2 Nether biomes§7.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: NETHER
+        target_amount: 2
+    currency: 180
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: RARE
+  mushroom_madness:
+    id: mushroom_madness
+    description: §7§dFind the rare shrooms.§7 Visit a §eMushroom Fields biome§7.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: MUSHROOM_FIELDS
+        target_amount: 1
+    currency: 190
+    skill_points: 2
+    skill_type: FORAGING
+    skill_xp: 125
+    tier: WEEKLY
+    rarity: RARE
+  deep_discovery:
+    id: deep_discovery
+    description: §7§9Into the unknown.§7 Visit a §eDeep Dark biome§7.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: DEEP_DARK
+        target_amount: 1
+    currency: 220
+    skill_points: 3
+    skill_type: AGILITY
+    skill_xp: 160
+    tier: WEEKLY
+    rarity: LEGENDARY
+  biome_bonanza:
+    id: biome_bonanza
+    description: §7§aCover the world.§7 Together, visit §e10000 biomes§7.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: ANY
+        target_amount: 10000
+    currency: 1300
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  icy_expedition:
+    id: icy_expedition
+    description: §7§bFrozen footsteps.§7 Explore §e3000 snowy biomes§7 together.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: SNOWY_TUNDRA
+        target_amount: 3000
+    currency: 1450
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  void_walker:
+    id: void_walker
+    description: §7§l§5Tread the end.§r§7 Explore §e2000 End biomes§7 across the server.
+    objectives:
+      objective1:
+        type: EXPLORE_BIOME
+        target_key: END_HIGHLANDS
+        target_amount: 2000
+    currency: 2000
+    skill_points: 3
+    skill_type: AGILITY
+    skill_xp: 1200
+    tier: GLOBAL
+    rarity: LEGENDARY
+  apple_snack:
+    id: apple_snack
+    description: §7§aStay healthy!§7 Eat §e3 apples§7 today.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: APPLE
+        target_amount: 3
+    currency: 50
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  meat_meal:
+    id: meat_meal
+    description: §7§cCarnivore's delight.§7 Eat §e5 cooked beef§7.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: COOKED_BEEF
+        target_amount: 5
+    currency: 55
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  suspicious_sip:
+    id: suspicious_sip
+    description: §7§5Take a risk.§7 Drink §e1 suspicious stew§7.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: SUSPICIOUS_STEW
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  potion_pop:
+    id: potion_pop
+    description: §7§dGet magical.§7 Drink §e1 potion§7 of any kind.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: POTION
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  golden_indulgence:
+    id: golden_indulgence
+    description: §7§6Taste the power.§7 Eat §e1 golden apple§7 today.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: GOLDEN_APPLE
+        target_amount: 1
+    currency: 80
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 60
+    tier: DAILY
+    rarity: LEGENDARY
+  food_fanatic:
+    id: food_fanatic
+    description: §7§aKeep your hunger full.§7 Eat §e40 items§7 of food this week.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: ANY
+        target_amount: 40
+    currency: 150
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  soup_season:
+    id: soup_season
+    description: §7§dSoothing and warm.§7 Drink §e10 mushroom stew§7.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: MUSHROOM_STEW
+        target_amount: 10
+    currency: 160
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  sweet_treats:
+    id: sweet_treats
+    description: §7§eDessert time!§7 Eat §e15 cookies§7 this week.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: COOKIE
+        target_amount: 15
+    currency: 170
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  brewmaster_test:
+    id: brewmaster_test
+    description: §7§dTry your concoctions.§7 Drink §e10 different potions§7.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: POTION
+        target_amount: 10
+    currency: 220
+    skill_points: 2
+    skill_type: ALCHEMY
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  nectar_of_gods:
+    id: nectar_of_gods
+    description: §7§6Divine refreshment.§7 Consume §e3 enchanted golden apples§7.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: ENCHANTED_GOLDEN_APPLE
+        target_amount: 3
+    currency: 300
+    skill_points: 3
+    skill_type: ALCHEMY
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  feast_frenzy:
+    id: feast_frenzy
+    description: §7§aA global appetite.§7 Eat §e10000 food items§7 as a server.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: ANY
+        target_amount: 10000
+    currency: 1200
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  brewer_bash:
+    id: brewer_bash
+    description: §7§dMagic for all.§7 Drink §e3000 potions§7 together.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: POTION
+        target_amount: 3000
+    currency: 1400
+    skill_points: 2
+    skill_type: ALCHEMY
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  golden_gathering:
+    id: golden_gathering
+    description: §7§6Shining celebration.§7 Eat §e1000 golden apples§7 server-wide.
+    objectives:
+      objective1:
+        type: CONSUME_ITEM
+        target_key: GOLDEN_APPLE
+        target_amount: 1000
+    currency: 1800
+    skill_points: 3
+    skill_type: ALCHEMY
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  farming_practice:
+    id: farming_practice
+    description: §7§aPlant and grow.§7 Gain §e50 Farming XP§7 today.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: FARMING
+        target_amount: 50
+    currency: 60
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  mining_session:
+    id: mining_session
+    description: §7§8Dig deep.§7 Gain §e75 Mining XP§7 today.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: MINING
+        target_amount: 75
+    currency: 65
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  archer_training:
+    id: archer_training
+    description: §7§fSharpen your aim.§7 Earn §e50 Archery XP§7 today.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: ARCHERY
+        target_amount: 50
+    currency: 65
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 40
+    tier: DAILY
+    rarity: COMMON
+  alchemist_test:
+    id: alchemist_test
+    description: §7§dExperiment and brew.§7 Gain §e30 Alchemy XP§7.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: ALCHEMY
+        target_amount: 30
+    currency: 60
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  foraging_focus:
+    id: foraging_focus
+    description: §7§2Forage the forests.§7 Gain §e40 Foraging XP§7.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: FORAGING
+        target_amount: 40
+    currency: 60
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  mining_madness:
+    id: mining_madness
+    description: §7§8Break blocks nonstop.§7 Gain §e600 Mining XP§7 this week.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: MINING
+        target_amount: 600
+    currency: 200
+    skill_points: 2
+    skill_type: MINING
+    skill_xp: 110
+    tier: WEEKLY
+    rarity: COMMON
+  defense_drill:
+    id: defense_drill
+    description: §7§cGet tougher.§7 Earn §e400 Defense XP§7.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: DEFENSE
+        target_amount: 400
+    currency: 220
+    skill_points: 2
+    skill_type: DEFENSE
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  skillstorm:
+    id: skillstorm
+    description: §7§6Be a jack of all trades.§7 Earn §e150 XP§7 in 5 skills.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: ANY
+        target_amount: 750
+    currency: 250
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 140
+    tier: WEEKLY
+    rarity: RARE
+  wizardry_awakens:
+    id: wizardry_awakens
+    description: §7§dPower in potions.§7 Gain §e500 Alchemy XP§7 this week.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: ALCHEMY
+        target_amount: 500
+    currency: 300
+    skill_points: 3
+    skill_type: ALCHEMY
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  global_grind:
+    id: global_grind
+    description: §7§aWork together.§7 Earn §e10000 total XP§7 across all skills.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: ANY
+        target_amount: 10000
+    currency: 1300
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  farming_frenzy:
+    id: farming_frenzy
+    description: §7§aFields in bloom.§7 Earn §e7000 Farming XP§7 server-wide.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: FARMING
+        target_amount: 7000
+    currency: 1500
+    skill_points: 2
+    skill_type: FARMING
+    skill_xp: 850
+    tier: GLOBAL
+    rarity: RARE
+  skillfest:
+    id: skillfest
+    description: §7§l§eXP explosion!§r§7 Gain §e20000 XP§7 in any combination.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_EXP
+        target_key: ANY
+        target_amount: 20000
+    currency: 2000
+    skill_points: 3
+    skill_type: AGILITY
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  level_up_farming:
+    id: level_up_farming
+    description: §7§aGrow your roots.§7 Gain §e1 level§7 in Farming.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: FARMING
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  level_up_mining:
+    id: level_up_mining
+    description: §7§8Break through!§7 Gain §e1 level§7 in Mining.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: MINING
+        target_amount: 1
+    currency: 65
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  level_up_fishing:
+    id: level_up_fishing
+    description: §7§bReel it in.§7 Gain §e1 level§7 in Fishing.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: FISHING
+        target_amount: 1
+    currency: 65
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  level_up_alchemy:
+    id: level_up_alchemy
+    description: §7§dPotion practice.§7 Gain §e1 level§7 in Alchemy.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: ALCHEMY
+        target_amount: 1
+    currency: 70
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  level_up_enchanting:
+    id: level_up_enchanting
+    description: §7§bChannel the arcane.§7 Gain §e1 level§7 in Enchanting.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: ENCHANTING
+        target_amount: 1
+    currency: 80
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 50
+    tier: DAILY
+    rarity: LEGENDARY
+  advancing_archery:
+    id: advancing_archery
+    description: §7§fFocus and fire.§7 Gain §e3 levels§7 in Archery.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: ARCHERY
+        target_amount: 3
+    currency: 150
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 80
+    tier: WEEKLY
+    rarity: COMMON
+  level_mastery:
+    id: level_mastery
+    description: §7§6Master your craft.§7 Gain §e5 levels§7 in any one skill.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: ANY
+        target_amount: 5
+    currency: 200
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: RARE
+  fighting_focus:
+    id: fighting_focus
+    description: §7§cTrain to win.§7 Gain §e4 levels§7 in Fighting.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: FIGHTING
+        target_amount: 4
+    currency: 180
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  agility_growth:
+    id: agility_growth
+    description: §7§aMove faster, grow stronger.§7 Gain §e3 levels§7 in Agility.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: AGILITY
+        target_amount: 3
+    currency: 170
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  alchemy_ascent:
+    id: alchemy_ascent
+    description: §7§dThe path of potions.§7 Gain §e4 levels§7 in Alchemy.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: ALCHEMY
+        target_amount: 4
+    currency: 250
+    skill_points: 3
+    skill_type: ALCHEMY
+    skill_xp: 180
+    tier: WEEKLY
+    rarity: LEGENDARY
+  collective_growth:
+    id: collective_growth
+    description: §7§aLeveling together.§7 Gain §e500 levels§7 across all skills server-wide.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: ANY
+        target_amount: 500
+    currency: 1300
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  enchanting_ascension:
+    id: enchanting_ascension
+    description: §7§bThe age of magic.§7 Gain §e250 Enchanting levels§7 globally.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: ENCHANTING
+        target_amount: 250
+    currency: 1700
+    skill_points: 2
+    skill_type: ENCHANTING
+    skill_xp: 900
+    tier: GLOBAL
+    rarity: RARE
+  ultimate_levelup:
+    id: ultimate_levelup
+    description: §7§l§6Level lords arise.§r§7 Gain §e1000 levels§7 across all skills.
+    objectives:
+      objective1:
+        type: GAIN_SKILL_LEVEL
+        target_key: ANY
+        target_amount: 1000
+    currency: 2200
+    skill_points: 3
+    skill_type: AGILITY
+    skill_xp: 1400
+    tier: GLOBAL
+    rarity: LEGENDARY
+  freshwater_feast:
+    id: freshwater_feast
+    description: §7§bCast and catch.§7 Fish up §e5 cod§7 from rivers or oceans.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: COD
+        target_amount: 5
+    currency: 50
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  salmon_snag:
+    id: salmon_snag
+    description: §7§cHook it quick!§7 Catch §e3 salmon§7 today.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: SALMON
+        target_amount: 3
+    currency: 50
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  tropical_touch:
+    id: tropical_touch
+    description: §7§eBright and exotic.§7 Catch §e1 tropical fish§7.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: TROPICAL_FISH
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  puffer_pop:
+    id: puffer_pop
+    description: §7§dCareful with those spikes.§7 Catch §e1 pufferfish§7.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: PUFFERFISH
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  angler_artifact:
+    id: angler_artifact
+    description: §7§6What lurks below?§7 Fish up §e1 treasure item§7.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: TREASURE
+        target_amount: 1
+    currency: 80
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 60
+    tier: DAILY
+    rarity: LEGENDARY
+  oceanic_haul:
+    id: oceanic_haul
+    description: §7§bThe ocean provides.§7 Catch §e50 cod§7 this week.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: COD
+        target_amount: 50
+    currency: 160
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  salmon_stream:
+    id: salmon_stream
+    description: §7§cHook a stream of success.§7 Catch §e35 salmon§7.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: SALMON
+        target_amount: 35
+    currency: 160
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  reef_gatherer:
+    id: reef_gatherer
+    description: §7§eA colorful collection.§7 Catch §e20 tropical fish§7.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: TROPICAL_FISH
+        target_amount: 20
+    currency: 190
+    skill_points: 2
+    skill_type: FISHING
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: RARE
+  venomous_catch:
+    id: venomous_catch
+    description: §7§dThose spikes sting!§7 Catch §e20 pufferfish§7.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: PUFFERFISH
+        target_amount: 20
+    currency: 200
+    skill_points: 2
+    skill_type: FISHING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  sunken_fortune:
+    id: sunken_fortune
+    description: §7§6Treasure hunter.§7 Catch §e5 treasure items§7 this week.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: TREASURE
+        target_amount: 5
+    currency: 260
+    skill_points: 3
+    skill_type: FISHING
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  great_fish_frenzy:
+    id: great_fish_frenzy
+    description: §7§aEveryone, cast your line!§7 Catch §e10000 fish§7 together.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: ANY
+        target_amount: 10000
+    currency: 1300
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  reef_reclamation:
+    id: reef_reclamation
+    description: §7§bProtect the reef.§7 Catch §e4000 tropical fish§7 together.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: TROPICAL_FISH
+        target_amount: 4000
+    currency: 1500
+    skill_points: 2
+    skill_type: FISHING
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  depths_of_wealth:
+    id: depths_of_wealth
+    description: §7§l§6Treasure from the sea.§r§7 Catch §e500 treasure items§7 server-wide.
+    objectives:
+      objective1:
+        type: FISH
+        target_key: TREASURE
+        target_amount: 500
+    currency: 2200
+    skill_points: 3
+    skill_type: FISHING
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  wall_builder:
+    id: wall_builder
+    description: §7§8Reinforce your base.§7 Place §e50 cobblestone blocks§7 today.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: COBBLESTONE
+        target_amount: 50
+    currency: 55
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  wooden_flooring:
+    id: wooden_flooring
+    description: §7§6Lay the groundwork.§7 Place §e40 oak planks§7.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: OAK_PLANKS
+        target_amount: 40
+    currency: 50
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  garden_patch:
+    id: garden_patch
+    description: §7§aStart a garden.§7 Place §e16 farmland blocks§7.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: FARMLAND
+        target_amount: 16
+    currency: 60
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  fence_line:
+    id: fence_line
+    description: §7§6Keep things in or out.§7 Place §e20 oak fences§7.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: OAK_FENCE
+        target_amount: 20
+    currency: 60
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  foundation_friday:
+    id: foundation_friday
+    description: §7§8Strong and steady.§7 Place §e500 stone bricks§7.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: STONE_BRICKS
+        target_amount: 500
+    currency: 160
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  treehouse_supports:
+    id: treehouse_supports
+    description: §7§6Nature's shelter.§7 Place §e300 jungle logs§7.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: JUNGLE_LOG
+        target_amount: 300
+    currency: 170
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  torch_network:
+    id: torch_network
+    description: §7§eLight the land.§7 Place §e250 torches§7 throughout the world.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: TORCH
+        target_amount: 250
+    currency: 180
+    skill_points: 2
+    skill_type: FORAGING
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: RARE
+  farming_grid:
+    id: farming_grid
+    description: §7§aSet the fields.§7 Place §e200 farmland blocks§7 this week.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: FARMLAND
+        target_amount: 200
+    currency: 190
+    skill_points: 2
+    skill_type: FARMING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  castle_walls:
+    id: castle_walls
+    description: §7§l§8Raise a fortress.§r§7 Place §e1000 cobblestone blocks§7 this
+      week.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: COBBLESTONE
+        target_amount: 1000
+    currency: 250
+    skill_points: 3
+    skill_type: MINING
+    skill_xp: 180
+    tier: WEEKLY
+    rarity: LEGENDARY
+  server_roads:
+    id: server_roads
+    description: §7§aPave the way.§7 Place §e10000 path blocks§7 together.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: GRASS_PATH
+        target_amount: 10000
+    currency: 1200
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  light_up_everywhere:
+    id: light_up_everywhere
+    description: §7§eNo more darkness.§7 Place §e5000 torches§7 server-wide.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: TORCH
+        target_amount: 5000
+    currency: 1500
+    skill_points: 2
+    skill_type: FORAGING
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  city_foundation:
+    id: city_foundation
+    description: §7§l§6Build a legacy.§r§7 Place §e50000 stone bricks§7 together.
+    objectives:
+      objective1:
+        type: PLACE_BLOCK
+        target_key: STONE_BRICKS
+        target_amount: 50000
+    currency: 2200
+    skill_points: 3
+    skill_type: MINING
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  coal_run:
+    id: coal_run
+    description: §7§0Fuel the furnace.§7 Mine §e20 coal ore§7.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: COAL_ORE
+        target_amount: 20
+    currency: 55
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  iron_inquiry:
+    id: iron_inquiry
+    description: §7§fTime to gear up.§7 Mine §e10 iron ore§7.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: IRON_ORE
+        target_amount: 10
+    currency: 60
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  redstone_raid:
+    id: redstone_raid
+    description: §7§cPower awaits.§7 Mine §e15 redstone ore§7.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: REDSTONE_ORE
+        target_amount: 15
+    currency: 60
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  diamond_delve:
+    id: diamond_delve
+    description: §7§bRare and precious.§7 Mine §e1 diamond ore§7.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: DIAMOND_ORE
+        target_amount: 1
+    currency: 80
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 50
+    tier: DAILY
+    rarity: LEGENDARY
+  stone_mountain:
+    id: stone_mountain
+    description: §7§8All the cobble.§7 Mine §e500 stone blocks§7 this week.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: STONE
+        target_amount: 500
+    currency: 150
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  coal_collector:
+    id: coal_collector
+    description: §7§0A solid supply.§7 Mine §e100 coal ore§7.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: COAL_ORE
+        target_amount: 100
+    currency: 160
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  precious_progress:
+    id: precious_progress
+    description: §7§bHunt for sparkle.§7 Mine §e10 diamond ore§7 this week.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: DIAMOND_ORE
+        target_amount: 10
+    currency: 220
+    skill_points: 2
+    skill_type: MINING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  lapis_lust:
+    id: lapis_lust
+    description: §7§9A little magic power.§7 Mine §e40 lapis ore§7.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: LAPIS_ORE
+        target_amount: 40
+    currency: 200
+    skill_points: 2
+    skill_type: ENCHANTING
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: RARE
+  netherite_dream:
+    id: netherite_dream
+    description: §7§l§8Deep and dangerous.§r§7 Mine §e5 ancient debris§7 this week.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: ANCIENT_DEBRIS
+        target_amount: 5
+    currency: 300
+    skill_points: 3
+    skill_type: MINING
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  server_quarry:
+    id: server_quarry
+    description: §7§aDigging as one.§7 Mine §e50000 stone blocks§7 as a server.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: STONE
+        target_amount: 50000
+    currency: 1300
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  precious_excavation:
+    id: precious_excavation
+    description: §7§bShiny teamwork.§7 Mine §e1000 diamond ore§7 server-wide.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: DIAMOND_ORE
+        target_amount: 1000
+    currency: 1600
+    skill_points: 2
+    skill_type: MINING
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  ancient_relics:
+    id: ancient_relics
+    description: §7§l§8Unearth the past.§r§7 Mine §e500 ancient debris§7 together.
+    objectives:
+      objective1:
+        type: MINE_BLOCK
+        target_key: ANCIENT_DEBRIS
+        target_amount: 500
+    currency: 2200
+    skill_points: 3
+    skill_type: MINING
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  emerald_exchange:
+    id: emerald_exchange
+    description: §7§aCommerce begins.§7 Trade §e5 emeralds§7 with villagers.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: VILLAGER
+        target_amount: 5
+    currency: 55
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  wool_for_emerald:
+    id: wool_for_emerald
+    description: §7§fSoft profits.§7 Trade wool for §e3 emeralds§7.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: SHEPHERD
+        target_amount: 3
+    currency: 55
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  cartographer_deal:
+    id: cartographer_deal
+    description: §7§eMap it out.§7 Trade paper with a §eCartographer§7.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: CARTOGRAPHER
+        target_amount: 2
+    currency: 60
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 35
+    tier: DAILY
+    rarity: RARE
+  tool_swap:
+    id: tool_swap
+    description: §7§8Get equipped.§7 Trade with a §eToolsmith§7.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: TOOLSMITH
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  mason_crafter:
+    id: mason_crafter
+    description: §7§6Stone for coin.§7 Trade with a §eMason§7 villager.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: MASON
+        target_amount: 2
+    currency: 70
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 50
+    tier: DAILY
+    rarity: LEGENDARY
+  emerald_merchant:
+    id: emerald_merchant
+    description: §7§aRake it in.§7 Trade §e50 emeralds§7 with villagers this week.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: VILLAGER
+        target_amount: 50
+    currency: 160
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  weaponsmith_work:
+    id: weaponsmith_work
+    description: §7§cUpgrade your arsenal.§7 Trade §e10 times§7 with a §eWeaponsmith§7.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: WEAPONSMITH
+        target_amount: 10
+    currency: 180
+    skill_points: 2
+    skill_type: FIGHTING
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: RARE
+  master_farmer:
+    id: master_farmer
+    description: §7§aReap rewards.§7 Trade §e20 crops§7 with a §eFarmer§7.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: FARMER
+        target_amount: 20
+    currency: 170
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  library_links:
+    id: library_links
+    description: §7§bUpgrade your gear.§7 Trade §e5 books§7 with a §eLibrarian§7.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: LIBRARIAN
+        target_amount: 5
+    currency: 190
+    skill_points: 2
+    skill_type: ENCHANTING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  nether_trader:
+    id: nether_trader
+    description: §7§l§cBarter with the brave.§r§7 Trade §e10 times§7 with §ePiglins§7.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: PIGLIN
+        target_amount: 10
+    currency: 250
+    skill_points: 3
+    skill_type: ALCHEMY
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  trade_empire:
+    id: trade_empire
+    description: §7§aPower through commerce.§7 Make §e5000 trades§7 together.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: VILLAGER
+        target_amount: 5000
+    currency: 1300
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  piglin_trade_pact:
+    id: piglin_trade_pact
+    description: §7§cGold for gain.§7 Make §e1000 trades§7 with §ePiglins§7.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: PIGLIN
+        target_amount: 1000
+    currency: 1600
+    skill_points: 2
+    skill_type: ALCHEMY
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  merchant_monopoly:
+    id: merchant_monopoly
+    description: §7§l§6Rule the market.§r§7 Complete §e10000 trades§7 server-wide.
+    objectives:
+      objective1:
+        type: TRADE
+        target_key: VILLAGER
+        target_amount: 10000
+    currency: 2200
+    skill_points: 3
+    skill_type: FARMING
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  cow_care:
+    id: cow_care
+    description: §7§aExpand the herd.§7 Breed §e3 cows§7 today.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: COW
+        target_amount: 3
+    currency: 55
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  sheep_shepherd:
+    id: sheep_shepherd
+    description: §7§fFuzzy friends.§7 Breed §e3 sheep§7.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: SHEEP
+        target_amount: 3
+    currency: 55
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  porky_parents:
+    id: porky_parents
+    description: §7§dGrow the pen.§7 Breed §e2 pigs§7.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: PIG
+        target_amount: 2
+    currency: 55
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  bunny_bloom:
+    id: bunny_bloom
+    description: §7§fSo fluffy!§7 Breed §e2 rabbits§7 today.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: RABBIT
+        target_amount: 2
+    currency: 60
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 35
+    tier: DAILY
+    rarity: RARE
+  bee_babies:
+    id: bee_babies
+    description: §7§eBuzz buzz.§7 Breed §e2 bees§7 to keep the flowers blooming.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: BEE
+        target_amount: 2
+    currency: 70
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 50
+    tier: DAILY
+    rarity: LEGENDARY
+  barn_boom:
+    id: barn_boom
+    description: §7§aFarms are thriving.§7 Breed §e25 cows§7 this week.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: COW
+        target_amount: 25
+    currency: 160
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  flock_growth:
+    id: flock_growth
+    description: §7§fWool for days.§7 Breed §e20 sheep§7.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: SHEEP
+        target_amount: 20
+    currency: 160
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  stable_stock:
+    id: stable_stock
+    description: §7§eRaise the herd.§7 Breed §e15 horses§7 this week.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: HORSE
+        target_amount: 15
+    currency: 180
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: RARE
+  fox_family:
+    id: fox_family
+    description: §7§6Cunning companions.§7 Breed §e10 foxes§7.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: FOX
+        target_amount: 10
+    currency: 200
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  zoo_zest:
+    id: zoo_zest
+    description: §7§l§aCreate your kingdom.§r§7 Breed §e8 different animal types§7
+      this week.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: ANY
+        target_amount: 8
+    currency: 260
+    skill_points: 3
+    skill_type: FARMING
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  animal_kingdom:
+    id: animal_kingdom
+    description: §7§aA bustling world.§7 Breed §e5000 animals§7 together.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: ANY
+        target_amount: 5000
+    currency: 1300
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  cow_craze:
+    id: cow_craze
+    description: §7§aMoo-massive.§7 Breed §e2000 cows§7 server-wide.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: COW
+        target_amount: 2000
+    currency: 1500
+    skill_points: 2
+    skill_type: FARMING
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  bee_colony:
+    id: bee_colony
+    description: §7§l§eThe hive expands.§r§7 Breed §e1000 bees§7 across the server.
+    objectives:
+      objective1:
+        type: BREED_ANIMAL
+        target_key: BEE
+        target_amount: 1000
+    currency: 2200
+    skill_points: 3
+    skill_type: FARMING
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  iron_ingots:
+    id: iron_ingots
+    description: §7§fFrom ore to utility.§7 Smelt §e10 iron ingots§7 today.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: IRON_INGOT
+        target_amount: 10
+    currency: 55
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  golden_glow:
+    id: golden_glow
+    description: §7§6Shiny and bright.§7 Smelt §e5 gold ingots§7 today.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: GOLD_INGOT
+        target_amount: 5
+    currency: 55
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  sand_to_glass:
+    id: sand_to_glass
+    description: §7§eClear view ahead.§7 Smelt §e16 glass§7 from sand.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: GLASS
+        target_amount: 16
+    currency: 55
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  cooked_cod:
+    id: cooked_cod
+    description: §7§bDinner’s served.§7 Smelt §e5 cod§7 in a furnace.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: COOKED_COD
+        target_amount: 5
+    currency: 60
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 35
+    tier: DAILY
+    rarity: RARE
+  steak_out:
+    id: steak_out
+    description: §7§cGet that protein.§7 Smelt §e5 beef into steak§7.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: COOKED_BEEF
+        target_amount: 5
+    currency: 70
+    skill_points: 1
+    skill_type: FARMING
+    skill_xp: 50
+    tier: DAILY
+    rarity: LEGENDARY
+  iron_forge:
+    id: iron_forge
+    description: §7§fKeep the iron flowing.§7 Smelt §e100 iron ingots§7.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: IRON_INGOT
+        target_amount: 100
+    currency: 160
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  golden_week:
+    id: golden_week
+    description: §7§6Refine the riches.§7 Smelt §e50 gold ingots§7.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: GOLD_INGOT
+        target_amount: 50
+    currency: 170
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  glassworks:
+    id: glassworks
+    description: §7§eWindow to the world.§7 Smelt §e150 glass§7 from sand.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: GLASS
+        target_amount: 150
+    currency: 180
+    skill_points: 2
+    skill_type: MINING
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: RARE
+  culinary_flame:
+    id: culinary_flame
+    description: §7§dChef's touch.§7 Smelt §e75 food items§7 this week.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: ANY_COOKED
+        target_amount: 75
+    currency: 190
+    skill_points: 2
+    skill_type: FARMING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  nether_refinery:
+    id: nether_refinery
+    description: §7§l§cPure power.§r§7 Smelt §e10 netherite scraps§7 this week.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: NETHERITE_SCRAP
+        target_amount: 10
+    currency: 250
+    skill_points: 3
+    skill_type: MINING
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  forge_alliance:
+    id: forge_alliance
+    description: §7§aSmelt together.§7 Smelt §e10000 items§7 as a server.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: ANY
+        target_amount: 10000
+    currency: 1300
+    skill_points: 1
+    skill_type: MINING
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  refined_future:
+    id: refined_future
+    description: §7§fIndustry thrives.§7 Smelt §e2500 iron ingots§7 globally.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: IRON_INGOT
+        target_amount: 2500
+    currency: 1500
+    skill_points: 2
+    skill_type: MINING
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  ancient_heat:
+    id: ancient_heat
+    description: §7§l§8Molten legacy.§r§7 Smelt §e500 netherite scraps§7 together.
+    objectives:
+      objective1:
+        type: SMELT_ITEM
+        target_key: NETHERITE_SCRAP
+        target_amount: 500
+    currency: 2200
+    skill_points: 3
+    skill_type: MINING
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  wolf_whisperer:
+    id: wolf_whisperer
+    description: §7§fA loyal companion.§7 Tame §e1 wolf§7 today.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: WOLF
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  cat_connection:
+    id: cat_connection
+    description: §7§dEarn trust.§7 Tame §e1 cat§7 in a village.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: CAT
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  horse_friend:
+    id: horse_friend
+    description: §7§6Hold on tight!§7 Tame §e1 horse§7.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: HORSE
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  parrot_pact:
+    id: parrot_pact
+    description: §7§bFeathery fun.§7 Tame §e1 parrot§7 with seeds.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: PARROT
+        target_amount: 1
+    currency: 70
+    skill_points: 1
+    skill_type: FORAGING
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  fox_friendship:
+    id: fox_friendship
+    description: §7§cSneaky bonds.§7 Tame §e1 fox§7 by breeding wild ones.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: FOX
+        target_amount: 1
+    currency: 80
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 50
+    tier: DAILY
+    rarity: LEGENDARY
+  wolf_pack:
+    id: wolf_pack
+    description: §7§fGather a pack.§7 Tame §e5 wolves§7 this week.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: WOLF
+        target_amount: 5
+    currency: 150
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  stable_setup:
+    id: stable_setup
+    description: §7§6Mount up.§7 Tame §e3 horses§7 this week.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: HORSE
+        target_amount: 3
+    currency: 160
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  feline_force:
+    id: feline_force
+    description: §7§dQuiet hunters.§7 Tame §e4 cats§7 this week.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: CAT
+        target_amount: 4
+    currency: 170
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  avian_allies:
+    id: avian_allies
+    description: §7§bTalk to the birds.§7 Tame §e3 parrots§7 this week.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: PARROT
+        target_amount: 3
+    currency: 190
+    skill_points: 2
+    skill_type: FORAGING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  sly_family:
+    id: sly_family
+    description: §7§l§cSly friends.§r§7 Tame §e2 foxes§7 this week.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: FOX
+        target_amount: 2
+    currency: 250
+    skill_points: 3
+    skill_type: AGILITY
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  taming_frenzy:
+    id: taming_frenzy
+    description: §7§aEveryone loves pets!§7 Tame §e1000 animals§7 together.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: ANY
+        target_amount: 1000
+    currency: 1300
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  canine_conquest:
+    id: canine_conquest
+    description: §7§fBark brigade.§7 Tame §e400 wolves§7 server-wide.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: WOLF
+        target_amount: 400
+    currency: 1500
+    skill_points: 2
+    skill_type: FIGHTING
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  tame_the_wild:
+    id: tame_the_wild
+    description: §7§l§6Masters of nature.§r§7 Tame §e100 foxes§7 together.
+    objectives:
+      objective1:
+        type: TAME_ENTITY
+        target_key: FOX
+        target_amount: 100
+    currency: 2200
+    skill_points: 3
+    skill_type: AGILITY
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  brew_basics:
+    id: brew_basics
+    description: §7§dStart small.§7 Brew §e3 awkward potions§7 today.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: AWKWARD_POTION
+        target_amount: 3
+    currency: 60
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  healing_draught:
+    id: healing_draught
+    description: §7§cMend the wounds.§7 Brew §e2 healing potions§7.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: POTION_OF_HEALING
+        target_amount: 2
+    currency: 60
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  swiftness_sample:
+    id: swiftness_sample
+    description: §7§bMove like the wind.§7 Brew §e1 swiftness potion§7.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: POTION_OF_SWIFTNESS
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  fire_resistance_dose:
+    id: fire_resistance_dose
+    description: §7§6Handle the heat.§7 Brew §e1 fire resistance potion§7.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: POTION_OF_FIRE_RESISTANCE
+        target_amount: 1
+    currency: 70
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 50
+    tier: DAILY
+    rarity: RARE
+  strength_stimulant:
+    id: strength_stimulant
+    description: §7§4Power in a bottle.§7 Brew §e1 strength potion§7 today.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: POTION_OF_STRENGTH
+        target_amount: 1
+    currency: 80
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 60
+    tier: DAILY
+    rarity: LEGENDARY
+  brew_laboratory:
+    id: brew_laboratory
+    description: §7§dPotions in progress.§7 Brew §e25 potions§7 this week.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: ANY
+        target_amount: 25
+    currency: 160
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  bubbles_of_battle:
+    id: bubbles_of_battle
+    description: §7§cPrepare for war.§7 Brew §e10 strength potions§7.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: POTION_OF_STRENGTH
+        target_amount: 10
+    currency: 180
+    skill_points: 2
+    skill_type: ALCHEMY
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: RARE
+  fiery_mixture:
+    id: fiery_mixture
+    description: §7§6Blaze defense.§7 Brew §e8 fire resistance potions§7.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: POTION_OF_FIRE_RESISTANCE
+        target_amount: 8
+    currency: 170
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  vitality_vials:
+    id: vitality_vials
+    description: §7§cRecover and repeat.§7 Brew §e12 healing potions§7.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: POTION_OF_HEALING
+        target_amount: 12
+    currency: 190
+    skill_points: 2
+    skill_type: ALCHEMY
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  arcane_experiment:
+    id: arcane_experiment
+    description: §7§l§dMystic mastery.§r§7 Brew §e15 unique potions§7 this week.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: ANY
+        target_amount: 15
+    currency: 250
+    skill_points: 3
+    skill_type: ALCHEMY
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  potion_power:
+    id: potion_power
+    description: §7§aBrew together.§7 Brew §e10000 potions§7 as a server.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: ANY
+        target_amount: 10000
+    currency: 1300
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  burnproof_brewing:
+    id: burnproof_brewing
+    description: §7§6Fireproofing the world.§7 Brew §e3000 fire resistance potions§7
+      together.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: POTION_OF_FIRE_RESISTANCE
+        target_amount: 3000
+    currency: 1500
+    skill_points: 2
+    skill_type: ALCHEMY
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  elixir_emporium:
+    id: elixir_emporium
+    description: §7§l§dAlchemy supreme.§r§7 Brew §e5000 specialty potions§7 as a server.
+    objectives:
+      objective1:
+        type: BREW_ITEM
+        target_key: ANY
+        target_amount: 5000
+    currency: 2200
+    skill_points: 3
+    skill_type: ALCHEMY
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  magic_touch:
+    id: magic_touch
+    description: §7§bInfuse your gear.§7 Enchant §e5 items§7 today.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: ANY
+        target_amount: 5
+    currency: 60
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  sharp_upgrade:
+    id: sharp_upgrade
+    description: §7§cCutting edge.§7 Enchant §e1 sword§7 today.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: IRON_SWORD
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  tool_boost:
+    id: tool_boost
+    description: §7§8Make it better.§7 Enchant §e1 pickaxe§7.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: IRON_PICKAXE
+        target_amount: 1
+    currency: 60
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  armor_up:
+    id: armor_up
+    description: §7§fShield yourself.§7 Enchant §e1 piece of armor§7.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: IRON_CHESTPLATE
+        target_amount: 1
+    currency: 70
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  bow_buff:
+    id: bow_buff
+    description: §7§dSilent hunter.§7 Enchant §e1 bow§7 today.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: BOW
+        target_amount: 1
+    currency: 80
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 60
+    tier: DAILY
+    rarity: LEGENDARY
+  workshop_wizardry:
+    id: workshop_wizardry
+    description: §7§bUpgrade galore.§7 Enchant §e20 items§7 this week.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: ANY
+        target_amount: 20
+    currency: 160
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  defensive_enchants:
+    id: defensive_enchants
+    description: §7§fIronclad.§7 Enchant §e5 chestplates§7.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: IRON_CHESTPLATE
+        target_amount: 5
+    currency: 180
+    skill_points: 2
+    skill_type: ENCHANTING
+    skill_xp: 120
+    tier: WEEKLY
+    rarity: RARE
+  sharpness_showdown:
+    id: sharpness_showdown
+    description: §7§cRazor’s edge.§7 Enchant §e3 swords§7 with sharpness.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: IRON_SWORD
+        target_amount: 3
+    currency: 170
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  efficiency_expert:
+    id: efficiency_expert
+    description: §7§8Work faster.§7 Enchant §e3 pickaxes§7 with efficiency.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: IRON_PICKAXE
+        target_amount: 3
+    currency: 190
+    skill_points: 2
+    skill_type: ENCHANTING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  mystic_armory:
+    id: mystic_armory
+    description: §7§l§dPower up.§r§7 Enchant §e15 unique item types§7 this week.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: ANY
+        target_amount: 15
+    currency: 250
+    skill_points: 3
+    skill_type: ENCHANTING
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  arcane_research:
+    id: arcane_research
+    description: §7§aKnowledge grows.§7 Enchant §e10000 items§7 as a server.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: ANY
+        target_amount: 10000
+    currency: 1300
+    skill_points: 1
+    skill_type: ENCHANTING
+    skill_xp: 600
+    tier: GLOBAL
+    rarity: COMMON
+  global_powerup:
+    id: global_powerup
+    description: §7§6Gear up together.§7 Enchant §e3000 armor pieces§7 server-wide.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: IRON_CHESTPLATE
+        target_amount: 3000
+    currency: 1500
+    skill_points: 2
+    skill_type: ENCHANTING
+    skill_xp: 800
+    tier: GLOBAL
+    rarity: RARE
+  grand_enchanters:
+    id: grand_enchanters
+    description: §7§l§bChannel the magic.§r§7 Enchant §e5000 unique items§7 as a team.
+    objectives:
+      objective1:
+        type: ENCHANT_ITEM
+        target_key: ANY
+        target_amount: 5000
+    currency: 2200
+    skill_points: 3
+    skill_type: ENCHANTING
+    skill_xp: 1300
+    tier: GLOBAL
+    rarity: LEGENDARY
+  killmob_daily_1:
+    id: killmob_daily_1
+    description: §7Eliminate §e3 hostiles§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOSTILE
+        target_amount: 3
+    currency: 50
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 27
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_2:
+    id: killmob_daily_2
+    description: §7Eliminate §e3 bosss§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BOSS
+        target_amount: 3
+    currency: 50
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 32
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_3:
+    id: killmob_daily_3
+    description: §7Eliminate §e8 guardians§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: GUARDIAN
+        target_amount: 8
+    currency: 53
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 26
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_4:
+    id: killmob_daily_4
+    description: §7Eliminate §e3 skeletons§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SKELETON
+        target_amount: 3
+    currency: 54
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 29
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_5:
+    id: killmob_daily_5
+    description: §7Eliminate §e6 strays§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: STRAY
+        target_amount: 6
+    currency: 53
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_6:
+    id: killmob_daily_6
+    description: §7§bEliminate §e10 cave spiders§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: CAVE_SPIDER
+        target_amount: 10
+    currency: 68
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 48
+    tier: DAILY
+    rarity: RARE
+  killmob_daily_7:
+    id: killmob_daily_7
+    description: §7Eliminate §e7 phantoms§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PHANTOM
+        target_amount: 7
+    currency: 47
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 27
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_8:
+    id: killmob_daily_8
+    description: §7§bEliminate §e10 wither skeletons§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: WITHER_SKELETON
+        target_amount: 10
+    currency: 65
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 47
+    tier: DAILY
+    rarity: RARE
+  killmob_daily_9:
+    id: killmob_daily_9
+    description: §7Eliminate §e8 undeads§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: UNDEAD
+        target_amount: 8
+    currency: 50
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 28
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_10:
+    id: killmob_daily_10
+    description: §7Eliminate §e5 skeletons§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SKELETON
+        target_amount: 5
+    currency: 48
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 25
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_11:
+    id: killmob_daily_11
+    description: §7Eliminate §e4 endermans§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ENDERMAN
+        target_amount: 4
+    currency: 46
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 28
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_12:
+    id: killmob_daily_12
+    description: §7§bEliminate §e3 endermans§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ENDERMAN
+        target_amount: 3
+    currency: 60
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 49
+    tier: DAILY
+    rarity: RARE
+  killmob_daily_13:
+    id: killmob_daily_13
+    description: §7Eliminate §e6 hoglins§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOGLIN
+        target_amount: 6
+    currency: 53
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 29
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_14:
+    id: killmob_daily_14
+    description: §7Eliminate §e5 wither skeletons§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: WITHER_SKELETON
+        target_amount: 5
+    currency: 45
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 31
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_15:
+    id: killmob_daily_15
+    description: §7Eliminate §e4 guardians§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: GUARDIAN
+        target_amount: 4
+    currency: 47
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 31
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_16:
+    id: killmob_daily_16
+    description: §7§bEliminate §e3 hostiles§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOSTILE
+        target_amount: 3
+    currency: 67
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  killmob_daily_17:
+    id: killmob_daily_17
+    description: §7Eliminate §e5 bosss§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BOSS
+        target_amount: 5
+    currency: 47
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 31
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_18:
+    id: killmob_daily_18
+    description: §7§bEliminate §e6 zombies§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ZOMBIE
+        target_amount: 6
+    currency: 62
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 43
+    tier: DAILY
+    rarity: RARE
+  killmob_daily_19:
+    id: killmob_daily_19
+    description: §7§bEliminate §e5 slimes§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SLIME
+        target_amount: 5
+    currency: 67
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 46
+    tier: DAILY
+    rarity: RARE
+  killmob_daily_20:
+    id: killmob_daily_20
+    description: §7§bEliminate §e7 strays§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: STRAY
+        target_amount: 7
+    currency: 70
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 48
+    tier: DAILY
+    rarity: RARE
+  killmob_daily_21:
+    id: killmob_daily_21
+    description: §7Eliminate §e8 magma cubes§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: MAGMA_CUBE
+        target_amount: 8
+    currency: 53
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 29
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_22:
+    id: killmob_daily_22
+    description: §7§bEliminate §e10 undeads§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: UNDEAD
+        target_amount: 10
+    currency: 62
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 48
+    tier: DAILY
+    rarity: RARE
+  killmob_daily_23:
+    id: killmob_daily_23
+    description: §7§bEliminate §e6 husks§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HUSK
+        target_amount: 6
+    currency: 63
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 41
+    tier: DAILY
+    rarity: RARE
+  killmob_daily_24:
+    id: killmob_daily_24
+    description: §7Eliminate §e7 bosss§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BOSS
+        target_amount: 7
+    currency: 47
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 28
+    tier: DAILY
+    rarity: COMMON
+  killmob_daily_25:
+    id: killmob_daily_25
+    description: §7Eliminate §e4 spiders§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SPIDER
+        target_amount: 4
+    currency: 53
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  killmob_weekly_1:
+    id: killmob_weekly_1
+    description: §7§l§6Eliminate §e102 endermans§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ENDERMAN
+        target_amount: 102
+    currency: 258
+    skill_points: 3
+    skill_type: FIGHTING
+    skill_xp: 195
+    tier: WEEKLY
+    rarity: LEGENDARY
+  killmob_weekly_2:
+    id: killmob_weekly_2
+    description: §7§bEliminate §e94 endermans§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ENDERMAN
+        target_amount: 94
+    currency: 186
+    skill_points: 2
+    skill_type: FIGHTING
+    skill_xp: 121
+    tier: WEEKLY
+    rarity: RARE
+  killmob_weekly_3:
+    id: killmob_weekly_3
+    description: §7Eliminate §e34 witchs§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: WITCH
+        target_amount: 34
+    currency: 146
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 99
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_4:
+    id: killmob_weekly_4
+    description: §7Eliminate §e72 phantoms§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PHANTOM
+        target_amount: 72
+    currency: 132
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 94
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_5:
+    id: killmob_weekly_5
+    description: §7§bEliminate §e137 hostiles§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOSTILE
+        target_amount: 137
+    currency: 197
+    skill_points: 2
+    skill_type: FIGHTING
+    skill_xp: 121
+    tier: WEEKLY
+    rarity: RARE
+  killmob_weekly_6:
+    id: killmob_weekly_6
+    description: §7§l§6Eliminate §e178 zombies§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ZOMBIE
+        target_amount: 178
+    currency: 267
+    skill_points: 3
+    skill_type: FIGHTING
+    skill_xp: 208
+    tier: WEEKLY
+    rarity: LEGENDARY
+  killmob_weekly_7:
+    id: killmob_weekly_7
+    description: §7§l§6Eliminate §e86 pillagers§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PILLAGER
+        target_amount: 86
+    currency: 234
+    skill_points: 3
+    skill_type: ARCHERY
+    skill_xp: 194
+    tier: WEEKLY
+    rarity: LEGENDARY
+  killmob_weekly_8:
+    id: killmob_weekly_8
+    description: §7Eliminate §e43 witchs§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: WITCH
+        target_amount: 43
+    currency: 138
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 93
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_9:
+    id: killmob_weekly_9
+    description: §7§bEliminate §e115 skeletons§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SKELETON
+        target_amount: 115
+    currency: 184
+    skill_points: 2
+    skill_type: ARCHERY
+    skill_xp: 127
+    tier: WEEKLY
+    rarity: RARE
+  killmob_weekly_10:
+    id: killmob_weekly_10
+    description: §7Eliminate §e88 phantoms§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PHANTOM
+        target_amount: 88
+    currency: 131
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 110
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_11:
+    id: killmob_weekly_11
+    description: §7§bEliminate §e58 skeletons§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SKELETON
+        target_amount: 58
+    currency: 166
+    skill_points: 2
+    skill_type: ARCHERY
+    skill_xp: 138
+    tier: WEEKLY
+    rarity: RARE
+  killmob_weekly_12:
+    id: killmob_weekly_12
+    description: §7Eliminate §e70 magma cubes§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: MAGMA_CUBE
+        target_amount: 70
+    currency: 139
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 105
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_13:
+    id: killmob_weekly_13
+    description: §7Eliminate §e76 witchs§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: WITCH
+        target_amount: 76
+    currency: 140
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 98
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_14:
+    id: killmob_weekly_14
+    description: §7Eliminate §e90 witchs§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: WITCH
+        target_amount: 90
+    currency: 140
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 102
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_15:
+    id: killmob_weekly_15
+    description: §7Eliminate §e65 bosss§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BOSS
+        target_amount: 65
+    currency: 142
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 91
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_16:
+    id: killmob_weekly_16
+    description: §7Eliminate §e104 pillagers§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PILLAGER
+        target_amount: 104
+    currency: 150
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 93
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_17:
+    id: killmob_weekly_17
+    description: §7Eliminate §e37 pillagers§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PILLAGER
+        target_amount: 37
+    currency: 136
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 105
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_18:
+    id: killmob_weekly_18
+    description: §7Eliminate §e62 zombies§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ZOMBIE
+        target_amount: 62
+    currency: 146
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 103
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_19:
+    id: killmob_weekly_19
+    description: §7Eliminate §e49 spiders§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SPIDER
+        target_amount: 49
+    currency: 138
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 92
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_20:
+    id: killmob_weekly_20
+    description: §7§bEliminate §e50 hoglins§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOGLIN
+        target_amount: 50
+    currency: 184
+    skill_points: 2
+    skill_type: FIGHTING
+    skill_xp: 119
+    tier: WEEKLY
+    rarity: RARE
+  killmob_weekly_21:
+    id: killmob_weekly_21
+    description: §7Eliminate §e107 bosss§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BOSS
+        target_amount: 107
+    currency: 156
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 95
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_22:
+    id: killmob_weekly_22
+    description: §7Eliminate §e60 husks§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HUSK
+        target_amount: 60
+    currency: 139
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 94
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_23:
+    id: killmob_weekly_23
+    description: §7Eliminate §e38 pillagers§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PILLAGER
+        target_amount: 38
+    currency: 140
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 108
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_24:
+    id: killmob_weekly_24
+    description: §7Eliminate §e59 zombies§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ZOMBIE
+        target_amount: 59
+    currency: 142
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  killmob_weekly_25:
+    id: killmob_weekly_25
+    description: §7Eliminate §e32 bosss§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BOSS
+        target_amount: 32
+    currency: 158
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 99
+    tier: WEEKLY
+    rarity: COMMON
+  undead_uprising:
+    id: undead_uprising
+    description: §7§aStop the horde!§7 Slay §e10 zombies§7 before nightfall.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ZOMBIE
+        target_amount: 10
+    currency: 50
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  bones_and_arrows:
+    id: bones_and_arrows
+    description: §7§fOutshoot the shooters.§7 Defeat §e8 skeletons§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SKELETON
+        target_amount: 8
+    currency: 50
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  sticky_situation:
+    id: sticky_situation
+    description: §7§2Squash the swarm.§7 Eliminate §e12 slimes§7 in the swamp.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SLIME
+        target_amount: 12
+    currency: 55
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  creeper_alert:
+    id: creeper_alert
+    description: §7§eCareful now...§7 Take out §e5 creepers§7 without blowing up!
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: CREEPER
+        target_amount: 5
+    currency: 55
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  cave_cleaner:
+    id: cave_cleaner
+    description: §7§8Down below.§7 Kill §e6 cave spiders§7 in the mineshaft.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: CAVE_SPIDER
+        target_amount: 6
+    currency: 55
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  phantom_shift:
+    id: phantom_shift
+    description: §7§9End the nightmares.§7 Defeat §e3 phantoms§7 during the night.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PHANTOM
+        target_amount: 3
+    currency: 60
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  scorched_blaze:
+    id: scorched_blaze
+    description: §7§6Tame the flame.§7 Eliminate §e4 blazes§7 in the Nether fortress.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BLAZE
+        target_amount: 4
+    currency: 60
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  witch_hunt:
+    id: witch_hunt
+    description: §7§dNo magic allowed.§7 Take down §e2 witches§7 in the swamp.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: WITCH
+        target_amount: 2
+    currency: 65
+    skill_points: 1
+    skill_type: ALCHEMY
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  nether_stalker:
+    id: nether_stalker
+    description: §7§cDeep danger.§7 Eliminate §e6 piglins§7 in the crimson forest.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PIGLIN
+        target_amount: 6
+    currency: 65
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  ender_conflict:
+    id: ender_conflict
+    description: §7§5Don't look away.§7 Defeat §e2 endermen§7 without teleporting
+      panic!
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ENDERMAN
+        target_amount: 2
+    currency: 80
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 60
+    tier: DAILY
+    rarity: LEGENDARY
+  spider_snare:
+    id: spider_snare
+    description: §7§cTangle no more.§7 Kill §e8 spiders§7 lurking in forests.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SPIDER
+        target_amount: 8
+    currency: 50
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  bone_breaker:
+    id: bone_breaker
+    description: §7§fCrack the shots.§7 Slay §e6 skeletons§7 with melee weapons.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SKELETON
+        target_amount: 6
+    currency: 50
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  husk_dust:
+    id: husk_dust
+    description: §7§eSandstorm showdown.§7 Defeat §e4 husks§7 in the desert.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HUSK
+        target_amount: 4
+    currency: 50
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 30
+    tier: DAILY
+    rarity: COMMON
+  stray_arrows:
+    id: stray_arrows
+    description: §7§9Chill them out.§7 Kill §e4 strays§7 in snowy biomes.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: STRAY
+        target_amount: 4
+    currency: 55
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  magma_mash:
+    id: magma_mash
+    description: §7§6Hot blobs incoming!§7 Defeat §e10 magma cubes§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: MAGMA_CUBE
+        target_amount: 10
+    currency: 55
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  drowned_defender:
+    id: drowned_defender
+    description: §7§3They rise from below.§7 Slay §e4 drowned§7 near riverbanks.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: DROWNED
+        target_amount: 4
+    currency: 55
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 35
+    tier: DAILY
+    rarity: COMMON
+  pillager_patrol:
+    id: pillager_patrol
+    description: §7§cClear the outpost.§7 Defeat §e3 pillagers§7 before they regroup.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PILLAGER
+        target_amount: 3
+    currency: 60
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  guardian_guard:
+    id: guardian_guard
+    description: §7§bEye of the sea.§7 Eliminate §e2 guardians§7 from the monument.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: GUARDIAN
+        target_amount: 2
+    currency: 60
+    skill_points: 1
+    skill_type: FISHING
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  stray_cleanse:
+    id: stray_cleanse
+    description: §7§9The cold sting.§7 Slay §e3 strays§7 haunting the tundra.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: STRAY
+        target_amount: 3
+    currency: 60
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  hoglin_hazard:
+    id: hoglin_hazard
+    description: §7§4Snout showdown.§7 Defeat §e2 hoglins§7 in the crimson forest.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOGLIN
+        target_amount: 2
+    currency: 65
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 45
+    tier: DAILY
+    rarity: RARE
+  enderman_encounter:
+    id: enderman_encounter
+    description: §7§5Face your fear.§7 Kill §e1 enderman§7 without looking away!
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ENDERMAN
+        target_amount: 1
+    currency: 75
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 55
+    tier: DAILY
+    rarity: LEGENDARY
+  cave_purge:
+    id: cave_purge
+    description: §7§8Silence below.§7 Eliminate §e7 cave spiders§7 today.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: CAVE_SPIDER
+        target_amount: 7
+    currency: 60
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 40
+    tier: DAILY
+    rarity: RARE
+  boss_breaker:
+    id: boss_breaker
+    description: §7§l§4The brave rise.§r§7 Defeat §e1 boss§7 — prove your strength!
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BOSS
+        target_amount: 1
+    currency: 90
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 60
+    tier: DAILY
+    rarity: LEGENDARY
+  bone_battlefield:
+    id: bone_battlefield
+    description: §7§fBones litter the ground.§7 Eliminate §e60 skeletons§7 this week.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SKELETON
+        target_amount: 60
+    currency: 150
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  rotten_reckoning:
+    id: rotten_reckoning
+    description: §7§aNo more moans.§7 Slay §e75 zombies§7 haunting the land.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ZOMBIE
+        target_amount: 75
+    currency: 150
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  webbed_wipeout:
+    id: webbed_wipeout
+    description: §7§cSweep the dark corners.§7 Kill §e50 spiders§7 across caves and
+      forests.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SPIDER
+        target_amount: 50
+    currency: 150
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  blazing_vengeance:
+    id: blazing_vengeance
+    description: §7§6Strike from the shadows.§7 Defeat §e35 blazes§7 in the Nether.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BLAZE
+        target_amount: 35
+    currency: 180
+    skill_points: 2
+    skill_type: FIGHTING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  phantom_duskfall:
+    id: phantom_duskfall
+    description: §7§9Cleanse the sky.§7 Slay §e20 phantoms§7 under moonlight.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PHANTOM
+        target_amount: 20
+    currency: 180
+    skill_points: 2
+    skill_type: AGILITY
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  soul_slayer:
+    id: soul_slayer
+    description: §7§8Bone and brimstone.§7 Kill §e25 wither skeletons§7 in the fortress.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: WITHER_SKELETON
+        target_amount: 25
+    currency: 180
+    skill_points: 2
+    skill_type: FIGHTING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  bastion_clearout:
+    id: bastion_clearout
+    description: §7§4Raiding the red.§7 Eliminate §e40 piglins§7 in bastions.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PIGLIN
+        target_amount: 40
+    currency: 160
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  cursed_caves:
+    id: cursed_caves
+    description: §7§8Snuff the swarm.§7 Kill §e60 cave spiders§7 in the depths.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: CAVE_SPIDER
+        target_amount: 60
+    currency: 160
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  magma_meltdown:
+    id: magma_meltdown
+    description: §7§6Crush the cubes.§7 Defeat §e70 magma cubes§7 in basalt deltas.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: MAGMA_CUBE
+        target_amount: 70
+    currency: 160
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  elder_execution:
+    id: elder_execution
+    description: §7§l§bFace the guardian.§r§7 Slay §e1 elder guardian§7 this week.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: BOSS
+        target_amount: 1
+    currency: 250
+    skill_points: 3
+    skill_type: FISHING
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  ocean_exile:
+    id: ocean_exile
+    description: §7§3Clear the coasts.§7 Defeat §e30 drowned§7 lurking in rivers and
+      oceans.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: DROWNED
+        target_amount: 30
+    currency: 150
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  husk_heatwave:
+    id: husk_heatwave
+    description: §7§eSurvive the sands.§7 Slay §e35 husks§7 under the sun.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HUSK
+        target_amount: 35
+    currency: 150
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  stray_frostbite:
+    id: stray_frostbite
+    description: §7§9Chill the night.§7 Eliminate §e25 strays§7 in icy regions.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: STRAY
+        target_amount: 25
+    currency: 160
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  pillager_pushback:
+    id: pillager_pushback
+    description: §7§cDefend the frontier.§7 Defeat §e30 pillagers§7 near outposts.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: PILLAGER
+        target_amount: 30
+    currency: 180
+    skill_points: 2
+    skill_type: ARCHERY
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  witch_wipeout:
+    id: witch_wipeout
+    description: §7§dBrew no more.§7 Take down §e20 witches§7 this week.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: WITCH
+        target_amount: 20
+    currency: 180
+    skill_points: 2
+    skill_type: ALCHEMY
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  enderman_encounter_weekly:
+    id: enderman_encounter_weekly
+    description: §7§5Face the void.§7 Defeat §e15 endermen§7 across dimensions.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ENDERMAN
+        target_amount: 15
+    currency: 180
+    skill_points: 2
+    skill_type: FIGHTING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  hoglin_havoc:
+    id: hoglin_havoc
+    description: §7§4Tame the tusks.§7 Eliminate §e20 hoglins§7 in the crimson wilds.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOGLIN
+        target_amount: 20
+    currency: 180
+    skill_points: 2
+    skill_type: FIGHTING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  nether_warrior:
+    id: nether_warrior
+    description: §7§cConquer the flame.§7 Defeat §e100 hostile mobs§7 in the Nether.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOSTILE
+        target_amount: 100
+    currency: 180
+    skill_points: 2
+    skill_type: FIGHTING
+    skill_xp: 130
+    tier: WEEKLY
+    rarity: RARE
+  undead_exterminator:
+    id: undead_exterminator
+    description: §7§l§aCleanse the corruption.§r§7 Slay §e150 undead§7 across the
+      world.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: UNDEAD
+        target_amount: 150
+    currency: 250
+    skill_points: 3
+    skill_type: FIGHTING
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  end_reckoning:
+    id: end_reckoning
+    description: §7§l§5Eyes of the End.§r§7 Defeat §e3 endermen§7 in the End dimension.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: ENDERMAN
+        target_amount: 3
+    currency: 250
+    skill_points: 3
+    skill_type: FIGHTING
+    skill_xp: 200
+    tier: WEEKLY
+    rarity: LEGENDARY
+  swarm_breaker:
+    id: swarm_breaker
+    description: §7§8Clear the darkness.§7 Slay §e120 hostile mobs§7 this week.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: HOSTILE
+        target_amount: 120
+    currency: 160
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 100
+    tier: WEEKLY
+    rarity: COMMON
+  skeletal_ambush:
+    id: skeletal_ambush
+    description: §7§fAmbushed at dusk.§7 Defeat §e45 skeletons§7.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SKELETON
+        target_amount: 45
+    currency: 150
+    skill_points: 1
+    skill_type: ARCHERY
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  creeper_crusade:
+    id: creeper_crusade
+    description: §7§2Don't let them explode!§7 Slay §e30 creepers§7 across the Overworld.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: CREEPER
+        target_amount: 30
+    currency: 150
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  slime_squash:
+    id: slime_squash
+    description: §7§aGreen goop cleanup.§7 Defeat §e50 slimes§7 in swamps and caves.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: SLIME
+        target_amount: 50
+    currency: 150
+    skill_points: 1
+    skill_type: FIGHTING
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON
+  caveguard_crusade:
+    id: caveguard_crusade
+    description: §7§8Mines must be safe.§7 Kill §e30 cave spiders§7 in shafts.
+    objectives:
+      objective1:
+        type: KILL_MOB
+        target_key: CAVE_SPIDER
+        target_amount: 30
+    currency: 150
+    skill_points: 1
+    skill_type: AGILITY
+    skill_xp: 90
+    tier: WEEKLY
+    rarity: COMMON

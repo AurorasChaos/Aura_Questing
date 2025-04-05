@@ -1,0 +1,109 @@
+quests:
+  zombie_slayer:
+    description: Defeat 10 zombies
+    type: KILL_MOB
+    target_key: ZOMBIE
+    target: 10
+    currency: 100
+    skill_points: 1
+    tier: DAILY
+    rarity: COMMON
+  log_collector:
+    description: Gather 30 spruce logs
+    type: GATHER_ITEM
+    target_key: SPRUCE_LOG
+    target: 30
+    currency: 80
+    skill_points: 1
+    tier: DAILY
+    rarity: COMMON
+  stone_smith:
+    description: Craft 10 stone swords
+    type: CRAFT_ITEM
+    target_key: STONE_SWORD
+    target: 10
+    currency: 90
+    skill_points: 2
+    tier: DAILY
+    rarity: RARE
+  walk_it_off:
+    description: Walk 1000 blocks
+    type: WALK_DISTANCE
+    target_key: ANY
+    target: 1000
+    currency: 70
+    skill_points: 1
+    tier: DAILY
+    rarity: COMMON
+  nom_nom:
+    description: Eat 5 cooked beef
+    type: CONSUME_ITEM
+    target_key: COOKED_BEEF
+    target: 5
+    currency: 60
+    skill_points: 1
+    tier: DAILY
+    rarity: COMMON
+  iron_miner:
+    description: Mine 25 iron ore
+    type: MINE_BLOCK
+    target_key: IRON_ORE
+    target: 25
+    currency: 120
+    skill_points: 3
+    tier: WEEKLY
+    rarity: RARE
+  deep_explorer:
+    description: Enter the Deep Dark biome
+    type: EXPLORE_BIOME
+    target_key: DEEP_DARK
+    target: 1
+    currency: 200
+    skill_points: 4
+    tier: WEEKLY
+    rarity: EPIC
+  fish_master:
+    description: Catch 15 cod
+    type: FISH
+    target_key: COD
+    target: 15
+    currency: 100
+    skill_points: 2
+    tier: WEEKLY
+    rarity: COMMON
+  nether_looter:
+    description: Loot 3 bastion chests
+    type: LOOT
+    target_key: CHEST
+    target: 3
+    currency: 150
+    skill_points: 3
+    tier: WEEKLY
+    rarity: EPIC
+  animal_whisperer:
+    description: Tame 3 wolves
+    type: TAME_ENTITY
+    target_key: WOLF
+    target: 3
+    currency: 250
+    skill_points: 5
+    tier: GLOBAL
+    rarity: LEGENDARY
+  blacksmith_apprentice:
+    description: Smelt 50 iron ingots
+    type: SMELT_ITEM
+    target_key: IRON_INGOT
+    target: 50
+    currency: 300
+    skill_points: 5
+    tier: GLOBAL
+    rarity: LEGENDARY
+  village_trader:
+    description: Trade with villagers 10 times
+    type: TRADE
+    target_key: ANY
+    target: 10
+    currency: 200
+    skill_points: 3
+    tier: GLOBAL
+    rarity: RARE

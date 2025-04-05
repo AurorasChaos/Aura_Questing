@@ -1,0 +1,51 @@
+# ============================
+# QuestPlugin Configuration
+# ============================
+
+# General Settings
+Debug: true
+
+QuestLimits:
+  DAILY : 5
+  WEEKLY : 10
+  GLOBAL : 15
+
+# Reset Schedule
+# These are Cron-style expressions. You can also use interval-based if preferred.
+Reset:
+  DailyTime: "0 0 6 * * *"    # Every day at 6:00 AM
+  WeeklyTime: "0 0 6 ? * MON" # Every Monday at 6:00 AM
+  UseCron: true
+
+# Rarity Weights for Quest Assignment
+RarityWeights:
+  COMMON: 60
+  RARE: 30
+  EPIC: 8
+  LEGENDARY: 2
+
+# Leaderboard Settings
+Leaderboard:
+  Enabled: true
+  Hologram:
+    Enabled: true
+    Location:
+      World: "world"
+      X: 100.5
+      Y: 75
+      Z: -120.5
+
+# Quest Holograms Display Format (Optional)
+HologramFormat:
+  - "&eTop Questers"
+  - "&f1. {player1} - {points1} pts"
+  - "&f2. {player2} - {points2} pts"
+  - "&f3. {player3} - {points3} pts"
+
+# PlaceholderAPI Hooks
+Placeholders:
+  Enabled: true
+
+# Any future flags
+Experimental:
+  UseSmartStructureDetection: true

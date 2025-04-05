@@ -1,0 +1,31 @@
+name: QuestPlugin
+version: 1.1
+main: com.example.questplugin.QuestPlugin
+api-version: 1.20
+author : auradev
+depend: [UniversalScoreboard]
+softdepend:
+  - Vault
+  - PlaceholderAPI
+  - Citizens
+  - AuraSkills
+commands:
+  questdev:
+    description: Developer tools for testing quests
+    permission: questplugin.dev
+    usage: /<command>
+  questreload:
+    description: Reloads the config and quest templates
+    permission: questplugin.admin
+    usage: /<command>
+  quest:
+    description: Opens your quest menu
+    usage: /quest
+    permission: questplugin.use
+permissions:
+  questplugin.dev:
+    description: Allows access to developer commands
+    default: op
+  questplugin.admin:
+    description: Allows reloading and admin-level commands
+    default: op
