@@ -82,6 +82,7 @@ public class QuestManager {
                 all.addAll(playerGlobalQuests.getOrDefault(uuid, Collections.emptyList()));
                 yield all;
             }
+            case null -> dailyQuests.getOrDefault(uuid, new ArrayList<>());
         };
     }
 

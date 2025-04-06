@@ -52,7 +52,8 @@
       <groupId>com.auradev</groupId>
       <artifactId>UniversalScoreboard</artifactId>
       <version>1.0.0</version>
-      <scope>provided</scope>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/UniversalScoreboard-1.0.0.jar</systemPath>
     </dependency>
 
     <dependency>

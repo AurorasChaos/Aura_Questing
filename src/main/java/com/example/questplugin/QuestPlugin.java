@@ -22,6 +22,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import com.auradev.universalscoreboard.UniversalScoreboard;
 import com.auradev.universalscoreboard.SidebarManager;
+import com.auradev.universalscoreboard.SidebarManager;
 
 public class QuestPlugin extends JavaPlugin {
 
@@ -52,6 +53,8 @@ public class QuestPlugin extends JavaPlugin {
 
         loadQuestData();
 
+        setupScoreboard();
+
         log("QuestPlugin enabled.");
     }
 
@@ -74,9 +77,11 @@ public class QuestPlugin extends JavaPlugin {
         this.questNotifier = new QuestNotifier(this);
         this.rewardHandler = new RewardHandler(this);
         instance = this;
+    }
 
-        SidebarManager manager = UniversalScoreboard.get().getSidebarManager();
-        manager.registerSection(new QuestLeaderboardSection());
+    public void setupScoreboard(){
+        SidebarManager sidebarManager = UniversalScoreboard.get().getSidebarManager();
+        sidebarManager.registerSection(new QuestLeaderboardSection());
     }
 
     public void registerListeners() {

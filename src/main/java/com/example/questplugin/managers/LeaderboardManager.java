@@ -20,7 +20,7 @@ public class LeaderboardManager {
     private final QuestPlugin plugin;
     private final Map<UUID, Integer> scores = new HashMap<>();
     private final File file;
-    private FileConfiguration config;
+    private final FileConfiguration config;
 
     public LeaderboardManager(QuestPlugin plugin) {
         this.plugin = plugin;

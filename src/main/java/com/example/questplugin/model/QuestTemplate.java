@@ -2,10 +2,12 @@ package com.example.questplugin.model;
 
 import com.example.questplugin.QuestPlugin;
 import org.bukkit.configuration.ConfigurationSection;
+import org.jetbrains.annotations.Debug;
 
 import java.lang.module.Configuration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 import static org.bukkit.Bukkit.getLogger;
@@ -26,11 +28,17 @@ public class QuestTemplate {
         private final String targetKey;
         private final int targetAmount;
         private int progress = 0;
+        private final String description;
 
-        public Objective(QuestType type, String targetKey, int targetAmount){
+        public Objective(QuestType type, String targetKey, int targetAmount, String description){
             this.type = type;
             this.targetKey = targetKey;
             this.targetAmount = targetAmount;
+            if (Objects.equals(description, "")) {
+                this.description = description;
+            } else {
+                this.description = (type + " " + targetKey + " " + targetAmount);
+            }
         }
 
         public QuestType getObjectiveType(){ return type;}
@@ -41,6 +49,7 @@ public class QuestTemplate {
             progress += amountToProgres;
 
         }
+        public String getDescription() {return description;}
         public void setProgress(int progress) {
             this.progress = progress;
         }
@@ -63,7 +72,8 @@ public class QuestTemplate {
             objectives.add(new Objective(
                     QuestType.valueOf(objSection.getString("type")),
                     objSection.getString("target_key"),
-                    objSection.getInt("target_amount")
+                    objSection.getInt("target_amount"),
+                    objSection.getString("description")
             ));
         }
 

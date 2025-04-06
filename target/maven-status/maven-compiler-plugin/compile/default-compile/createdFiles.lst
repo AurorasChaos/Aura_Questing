@@ -5,7 +5,6 @@ com\example\questplugin\util\QuestNotifier.class
 com\example\questplugin\Listeners\AuraSkillsListener.class
 com\example\questplugin\Listeners\LifeEventsListener.class
 com\example\questplugin\managers\QuestManager.class
-com\example\questplugin\managers\QuestManager$1.class
 com\example\questplugin\Listeners\BlockEventsListener.class
 com\example\questplugin\model\QuestRarity.class
 com\example\questplugin\managers\QuestAssigner.class

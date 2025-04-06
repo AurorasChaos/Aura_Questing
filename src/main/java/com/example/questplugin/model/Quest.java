@@ -27,7 +27,7 @@ public class Quest {
     public Quest(QuestTemplate template, UUID playerUUID) {
         this.playerUUID = playerUUID;
         for (QuestTemplate.Objective obj : template.getObjectives()){
-            objectives.add(new QuestTemplate.Objective(obj.getObjectiveType(), obj.getObjectiveTargetKey(), obj.getObjectiveTargetAmount()));
+            objectives.add(new QuestTemplate.Objective(obj.getObjectiveType(), obj.getObjectiveTargetKey(), obj.getObjectiveTargetAmount(), obj.getDescription()));
         }
         this.targetAmount = objectives.size();
         this.id = template.getId();

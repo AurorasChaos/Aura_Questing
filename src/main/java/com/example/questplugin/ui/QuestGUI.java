@@ -14,6 +14,7 @@ import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -49,6 +50,9 @@ public class QuestGUI implements Listener {
     private final Map<UUID, Integer> shimmerTaskIds = new HashMap<>();
     private final File claimFile;
     private final FileConfiguration claimConfig;
+
+    private QuestTier currentTier;
+    private int currentPage;
 
     private final Material[] shimmerColors = {
         Material.RED_STAINED_GLASS_PANE,
@@ -86,6 +90,11 @@ public class QuestGUI implements Listener {
         pageMap.put(uuid, page);
         filterMap.put(uuid, filter);
         tierMap.put(uuid, tier);
+
+        currentPage = page;
+        currentTier = tier;
+
+        plugin.debug("Here's the current info:" + page + " " +filter + " " + tier );
 
         int maxPages = (int) Math.ceil(filtered.size() / (double) QUESTS_PER_PAGE);
         if (maxPages <= 0) maxPages = 1;
@@ -141,7 +150,7 @@ public class QuestGUI implements Listener {
         int slot = event.getRawSlot();
 
         if (slotQuestMap.get(slot) == null){
-            open(player, 1, QuestTier.DAILY, QuestFilter.ALL);
+            open(player, currentPage, currentTier, QuestFilter.ALL);
         }
 
         questMap = slotQuestMap.get(player.getUniqueId());
@@ -188,6 +197,7 @@ public class QuestGUI implements Listener {
             case WEEKLY -> "§9§lWeekly Quests §7(Page " + (page + 1) + ")";
             case GLOBAL -> "§d§lGlobal Quests §7(Page " + (page + 1) + ")";
             case ALL -> "§e§lAll Quests §7(Page " + (page + 1) + ")";
+            case null, default ->  "§a§lDaily Quests §7(Page " + (page + 1) + ")";
         };
     }
 
@@ -202,7 +212,7 @@ public class QuestGUI implements Listener {
     }
 
     private ItemStack glowing(ItemStack item) {
-        item.addUnsafeEnchantment(org.bukkit.enchantments.Enchantment.LURE, 1);
+        item.addUnsafeEnchantment(Enchantment.LURE, 1);
         ItemMeta meta = item.getItemMeta();
         if (meta != null) {
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -225,22 +235,28 @@ public class QuestGUI implements Listener {
 
         meta.setDisplayName(quest.getRarity().getColor() + quest.getDescription());
         List<String> lore = new ArrayList<>();
-        lore.add("§8Rarity: " + quest.getRarity().getDisplayName());
+        lore.add("");
         for (QuestTemplate.Objective obj : quest.getQuestObjectives()){
-            lore.add(obj.getObjectiveType().toString() + " : " + obj.getObjectiveTargetAmount() + " of " + obj.getObjectiveTargetKey());
+            lore.add(obj.getDescription());
+            lore.add(obj.getProgress() + " /" + obj.getObjectiveTargetAmount());
         }
-        lore.add("§7Progress: §f" + quest.getCurrentProgress() + " / " + quest.getTargetAmount());
+        lore.add("");
+        lore.add("Overall : " + quest.getCurrentProgress() + " / " + quest.getTargetAmount());
+        lore.add("");
+        lore.add("§b+ " + quest.getCurrencyReward() + " coins");
+        lore.add("§d+ " + quest.getSkillType().toUpperCase() + ": " + quest.getSkillXp() + "xp");
+
+        lore.add("§8Rarity: " + quest.getRarity().getDisplayName());
+
         if (quest.isRewardClaimed()) {
             lore.add("§a✔ Reward claimed!");
         } else if (quest.isCompleted()) {
             lore.add("§eClick to claim reward!");
-            meta.addEnchant(org.bukkit.enchantments.Enchantment.LUCK, 1, true);
+            meta.addEnchant(Enchantment.LUCK, 1, true);
             meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         } else {
             lore.add("§cNot completed yet.");
         }
-        lore.add("§b+ " + quest.getCurrencyReward() + " coins");
-        lore.add("§d+ " + quest.getSkillType().toUpperCase() + ": " + quest.getSkillXp() + "xp");
 
         meta.setLore(lore);
         item.setItemMeta(meta);

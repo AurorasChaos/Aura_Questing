@@ -28,6 +28,7 @@ public class QuestLeaderboardSection implements SidebarSection {
     @Override
     public SidebarFrame getFrame(Player player) {
         return (Player p) -> {
+            QuestPlugin.getInstance().debug("[Leaderboard] Loading frame section");
             List<String> lines = new ArrayList<>();
             lines.add("§6§lTop Questers");
 
