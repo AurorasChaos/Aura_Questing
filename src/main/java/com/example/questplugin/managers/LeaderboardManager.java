@@ -15,6 +15,9 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * Manages the leaderboard for tracking player quest scores.
+ */
 public class LeaderboardManager {
 
     private final QuestPlugin plugin;
@@ -22,6 +25,11 @@ public class LeaderboardManager {
     private final File file;
     private final FileConfiguration config;
 
+    /**
+     * Constructs a new instance of LeaderboardManager.
+     *
+     * @param plugin The main plugin instance.
+     */
     public LeaderboardManager(QuestPlugin plugin) {
         this.plugin = plugin;
         this.file = new File(plugin.getDataFolder(), "leaderboard.yml");
@@ -32,6 +40,12 @@ public class LeaderboardManager {
         load();
     }
 
+    /**
+     * Adds points to a player's score.
+     *
+     * @param uuid The UUID of the player.
+     * @param amount The amount of points to add.
+     */
     public void addScore(UUID uuid, int amount) {
         int newScore = scores.getOrDefault(uuid, 0) + amount;
         scores.put(uuid, newScore);
@@ -40,10 +54,22 @@ public class LeaderboardManager {
         updateHologram();
     }
 
+    /**
+     * Retrieves a player's score.
+     *
+     * @param uuid The UUID of the player.
+     * @return The player's score, or 0 if not found.
+     */
     public int getScore(UUID uuid) {
         return scores.getOrDefault(uuid, 0);
     }
 
+    /**
+     * Retrieves the top players with their scores up to a specified limit.
+     *
+     * @param limit The number of top players to retrieve.
+     * @return A list of player-score entries.
+     */
     public List<Map.Entry<UUID, Integer>> getTop(int limit) {
         return scores.entrySet().stream()
                 .sorted(Map.Entry.<UUID, Integer>comparingByValue().reversed())
@@ -51,6 +77,9 @@ public class LeaderboardManager {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Loads player scores from the configuration file.
+     */
     public void load() {
         scores.clear();
         for (String key : config.getKeys(false)) {
@@ -65,6 +94,9 @@ public class LeaderboardManager {
         }
     }
 
+    /**
+     * Saves player scores to the configuration file.
+     */
     public void save() {
         for (Map.Entry<UUID, Integer> entry : scores.entrySet()) {
             config.set(entry.getKey().toString(), entry.getValue());
@@ -78,6 +110,9 @@ public class LeaderboardManager {
         }
     }
 
+    /**
+     * Updates the hologram displaying the leaderboard.
+     */
     public void updateHologram() {
         if (!plugin.getConfig().getBoolean("Leaderboard.EnableHologram", false)) return;
         if (!Bukkit.getPluginManager().isPluginEnabled("DecentHolograms")) return;
@@ -121,6 +156,12 @@ public class LeaderboardManager {
         plugin.debug("[Leaderboard] Updated hologram lines.");
     }
 
+    /**
+     * Records the completion of a quest by a player and updates their score.
+     *
+     * @param playerId The UUID of the player.
+     * @param quest The completed quest.
+     */
     public void recordCompletion(UUID playerId, Quest quest) {
         int points;
         switch (quest.getRarity()) {
@@ -135,6 +176,12 @@ public class LeaderboardManager {
         plugin.debug("[Leaderboard] Recorded " + points + " pts for " + playerId + " for completing " + quest.getRarity().name() + " quest: " + quest.getId());
     }
 
+    /**
+     * Retrieves the top players and their scores as a map.
+     *
+     * @param amount The number of top players to retrieve.
+     * @return A map of player names to their scores.
+     */
     public Map<String, Integer> getTopPlayers(int amount) {
         return getTop(amount).stream()
             .map(entry -> {
@@ -150,6 +197,12 @@ public class LeaderboardManager {
             );
     }
 
+    /**
+     * Retrieves the rank of a player on the leaderboard.
+     *
+     * @param playerId The UUID of the player.
+     * @return The player's rank, or -1 if not found.
+     */
     public int getRank(UUID playerId) {
         List<Map.Entry<UUID, Integer>> sorted = scores.entrySet().stream()
                 .sorted(Map.Entry.<UUID, Integer>comparingByValue().reversed())
@@ -163,5 +216,4 @@ public class LeaderboardManager {
     
         return -1; // not found
     }
-    
 }

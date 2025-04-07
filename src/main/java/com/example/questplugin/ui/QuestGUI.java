@@ -238,7 +238,7 @@ public class QuestGUI implements Listener {
         lore.add("");
         for (QuestTemplate.Objective obj : quest.getQuestObjectives()){
             lore.add(obj.getDescription());
-            lore.add(obj.getProgress() + " /" + obj.getObjectiveTargetAmount());
+            lore.add(obj.getProgress() + " /" + obj.getTargetAmount());
         }
         lore.add("");
         lore.add("Overall : " + quest.getCurrentProgress() + " / " + quest.getTargetAmount());
@@ -314,3 +314,6 @@ public class QuestGUI implements Listener {
         stopShimmering(event.getPlayer().getUniqueId());
     }
 }
+
+
+

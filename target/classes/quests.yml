@@ -3,6 +3,7 @@
     description: §7§cThe undead rise§7 — bring down §e5000§7 as a server.
     objectives:
       objective1:
+        description: Kill 5000 undead
         type: KILL_MOB
         target_key: UNDEAD
         target_amount: 5000

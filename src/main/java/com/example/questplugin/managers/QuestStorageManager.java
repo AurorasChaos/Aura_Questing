@@ -3,44 +3,102 @@ package com.example.questplugin.managers;
 import com.example.questplugin.QuestPlugin;
 import com.example.questplugin.model.Quest;
 import com.example.questplugin.model.QuestTemplate;
+
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * Manages storage of quest data for players in a plugin.
+ */
 public class QuestStorageManager {
 
+    /**
+     * The main plugin instance.
+     */
     private final QuestPlugin plugin;
+
+    /**
+     * Map storing player UUIDs to their daily quest data.
+     */
     private final Map<UUID, PlayerQuestData> playerQuestData = new HashMap<>();
+
+    /**
+     * Map storing player UUIDs to their saved daily quests.
+     */
     private final Map<UUID, List<Quest>> savedDaily = new HashMap<>();
+
+    /**
+     * Map storing player UUIDs to their saved weekly quests.
+     */
     private final Map<UUID, List<Quest>> savedWeekly = new HashMap<>();
+
+    /**
+     * The file where player quest data is stored.
+     */
     private final File file;
+
+    /**
+     * Configuration for the player_quests.yml file.
+     */
     private FileConfiguration config;
 
+    /**
+     * Constructs a new QuestStorageManager instance and loads existing data if available.
+     *
+     * @param plugin The main plugin instance.
+     */
     public QuestStorageManager(QuestPlugin plugin) {
         this.plugin = plugin;
         this.file = new File(plugin.getDataFolder(), "player_quests.yml");
+
+        // Check if the file exists, and create it if not
         if (!file.exists()) {
             plugin.saveResource("player_quests.yml", false);
             plugin.debug("[Storage] Created new player_quests.yml");
         }
+
         this.config = YamlConfiguration.loadConfiguration(file);
         load();
     }
 
+    /**
+     * Returns a set containing all UUIDs of players with stored quest data.
+     *
+     * @return Set of player UUIDs.
+     */
     public Set<UUID> getAllStoredPlayers() {
         return playerQuestData.keySet();
     }
 
+    /**
+     * Loads the daily quests for a specific player from storage.
+     *
+     * @param uuid The player's UUID.
+     * @return List of daily quests, or an empty list if none exist.
+     */
     public List<Quest> loadPlayerDailyQuests(UUID uuid) {
         return playerQuestData.containsKey(uuid) ? playerQuestData.get(uuid).getDailyQuests() : new ArrayList<>();
     }
 
+    /**
+     * Loads the weekly quests for a specific player from storage.
+     *
+     * @param uuid The player's UUID.
+     * @return List of weekly quests, or an empty list if none exist.
+     */
     public List<Quest> loadPlayerWeeklyQuests(UUID uuid) {
         return playerQuestData.containsKey(uuid) ? playerQuestData.get(uuid).getWeeklyQuests() : new ArrayList<>();
     }
 
+    /**
+     * Loads player quest data from storage into the QuestManager instance.
+     *
+     * @param questManager The QuestManager instance to load data into.
+     */
     public void loadIntoManager(QuestManager questManager) {
         plugin.debug("[Storage] Loading saved quests into QuestManager...");
         for (UUID uuid : getAllStoredPlayers()) {
@@ -52,6 +110,11 @@ public class QuestStorageManager {
         }
     }
 
+    /**
+     * Saves player quest data from the QuestManager instance back to storage.
+     *
+     * @param questManager The QuestManager instance to save data from.
+     */
     public void saveFromManager(QuestManager questManager) {
         plugin.debug("[Storage] Saving player quest data from manager...");
         for (UUID uuid : questManager.getAllPlayers()) {
@@ -63,6 +126,9 @@ public class QuestStorageManager {
         save();
     }
 
+    /**
+     * Loads player quest data from the player_quests.yml file into storage.
+     */
     public void load() {
         plugin.debug("[Storage] Loading quests from player_quests.yml...");
         for (String uuidStr : config.getKeys(false)) {
@@ -80,9 +146,9 @@ public class QuestStorageManager {
                     }
                     Quest quest = new Quest(template, uuid);
                     for (QuestTemplate.Objective obj : template.getObjectives()) {
-                        String path = uuidStr + ".daily." + key + ".objectives." + obj.getObjectiveTargetKey();
+                        String path = uuidStr + ".daily." + key + ".objectives." + obj.getTargetKey();
                         quest.getQuestObjectives().stream()
-                                .filter(qObj -> qObj.getObjectiveTargetKey().equals(obj.getObjectiveTargetKey()))
+                                .filter(qObj -> qObj.getTargetKey().equals(obj.getTargetKey()))
                                 .findFirst()
                                 .ifPresent(qObj -> {
                                     qObj.setProgress(config.getInt(path + ".progress"));
@@ -103,9 +169,9 @@ public class QuestStorageManager {
                     }
                     Quest quest = new Quest(template, uuid);
                     for (QuestTemplate.Objective obj : template.getObjectives()) {
-                        String path = uuidStr + ".weekly." + key + ".objectives." + obj.getObjectiveTargetKey();
+                        String path = uuidStr + ".weekly." + key + ".objectives." + obj.getTargetKey();
                         quest.getQuestObjectives().stream()
-                                .filter(qObj -> qObj.getObjectiveTargetKey().equals(obj.getObjectiveTargetKey()))
+                                .filter(qObj -> qObj.getTargetKey().equals(obj.getTargetKey()))
                                 .findFirst()
                                 .ifPresent(qObj -> {
                                     qObj.setProgress(config.getInt(path + ".progress"));
@@ -123,6 +189,9 @@ public class QuestStorageManager {
         }
     }
 
+    /**
+     * Saves player quest data from storage to the player_quests.yml file.
+     */
     public void save() {
         plugin.debug("[Storage] Saving player_quests.yml...");
         for (UUID uuid : savedDaily.keySet()) {
@@ -139,6 +208,7 @@ public class QuestStorageManager {
                 config.set(path + ".claimed", q.isRewardClaimed());
             }
         }
+
         try {
             config.save(file);
             plugin.debug("[Storage] Quest data successfully saved to file.");
@@ -148,6 +218,13 @@ public class QuestStorageManager {
         }
     }
 
+    /**
+     * Saves provided daily and weekly quest lists for a specific player UUID.
+     *
+     * @param uuid   The player's UUID.
+     * @param daily  The list of daily quests to save.
+     * @param weekly The list of weekly quests to save.
+     */
     public void savePlayerQuests(UUID uuid, List<Quest> daily, List<Quest> weekly) {
         savedDaily.put(uuid, daily);
         savedWeekly.put(uuid, weekly);
@@ -155,27 +232,66 @@ public class QuestStorageManager {
         plugin.debug("[Storage] Queued quest data for " + uuid);
     }
 
+    /**
+     * Returns the list of saved daily quests for a specific player UUID.
+     *
+     * @param uuid The player's UUID.
+     * @return List of saved daily quests, or an empty list if none exist.
+     */
     public List<Quest> getSavedDaily(UUID uuid) {
         return savedDaily.getOrDefault(uuid, new ArrayList<>());
     }
 
+    /**
+     * Returns the list of saved weekly quests for a specific player UUID.
+     *
+     * @param uuid The player's UUID.
+     * @return List of saved weekly quests, or an empty list if none exist.
+     */
     public List<Quest> getSavedWeekly(UUID uuid) {
         return savedWeekly.getOrDefault(uuid, new ArrayList<>());
     }
 
+    /**
+     * Represents a player's daily and weekly quest data.
+     */
     public class PlayerQuestData {
+
+        /**
+         * The list of daily quests for this player.
+         */
         private final List<Quest> daily;
+
+        /**
+         * The list of weekly quests for this player.
+         */
         private final List<Quest> weekly;
 
+        /**
+         * Constructs a new PlayerQuestData instance with provided daily and weekly quest lists.
+         *
+         * @param daily   The list of daily quests.
+         * @param weekly The list of weekly quests.
+         */
         public PlayerQuestData(List<Quest> daily, List<Quest> weekly) {
             this.daily = daily;
             this.weekly = weekly;
         }
 
+        /**
+         * Returns the list of daily quests for this player.
+         *
+         * @return List of daily quests.
+         */
         public List<Quest> getDailyQuests() {
             return daily;
         }
 
+        /**
+         * Returns the list of weekly quests for this player.
+         *
+         * @return List of weekly quests.
+         */
         public List<Quest> getWeeklyQuests() {
             return weekly;
         }

@@ -32,7 +32,7 @@ public abstract class BaseListener {
      */
     protected void incrementProgressAndNotify(Player player, QuestTemplate.Objective obj, Quest quest) {
         obj.incrementProgress(1);
-        if (obj.getProgress() >= obj.getObjectiveTargetAmount()){
+        if (obj.getProgress() >= obj.getTargetAmount()){
             quest.incrementProgress(1);
         }
         plugin.getQuestNotifier().notifyProgress(player, obj, quest);
@@ -51,7 +51,7 @@ public abstract class BaseListener {
         for (Quest quest : questManager.getPlayerQuests(player.getUniqueId())){
             if (!quest.isCompleted()){
                 quest.getQuestObjectives().forEach(obj -> {
-                    if (obj.getObjectiveType() == type && obj.getObjectiveTargetKey().equalsIgnoreCase(target)){
+                    if (obj.getType() == type && obj.getTargetKey().equalsIgnoreCase(target)){
                         incrementProgressAndNotify(player, obj, quest);
                         plugin.debug("[" + type.toString() + "] Updated progress for " + quest.getTier() +  " quest " + quest.getId() + ": " + obj.getProgress());
                     }
@@ -62,7 +62,7 @@ public abstract class BaseListener {
         for (Quest quest : questManager.getGlobalQuests()){
             if (!quest.isCompleted()){
                 quest.getQuestObjectives().forEach(obj -> {
-                    if (obj.getObjectiveType() == type && obj.getObjectiveTargetKey().equalsIgnoreCase(target)){
+                    if (obj.getType() == type && obj.getTargetKey().equalsIgnoreCase(target)){
                         incrementProgressAndNotify(player, obj, quest);
                         plugin.debug("[" + type.toString() + "] Updated progress for global quest " + quest.getId() + ": " + obj.getProgress());
                     }

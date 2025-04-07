@@ -1,44 +1,86 @@
-// This file will serve as the main patch hub for the fixed QuestPlugin system.
-// We'll start with logging and config enhancements, then correct data syncing, resets, and missing event handling.
-
 package com.example.questplugin;
 
 import com.example.questplugin.Listeners.*;
 import com.example.questplugin.commands.DevCommands;
 import com.example.questplugin.commands.QuestCommand;
 import com.example.questplugin.managers.*;
-import com.example.questplugin.model.QuestLeaderboardSection;
 import com.example.questplugin.ui.QuestGUI;
 import com.example.questplugin.util.QuestNotifier;
 import com.example.questplugin.util.RarityRoller;
+
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Player;
+import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import net.milkbowl.vault.economy.Economy;
 import dev.aurelium.auraskills.api.AuraSkillsApi;
-
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.RegisteredServiceProvider;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
-import com.auradev.universalscoreboard.UniversalScoreboard;
-import com.auradev.universalscoreboard.SidebarManager;
-import com.auradev.universalscoreboard.SidebarManager;
+
+/**
+ * The main class for QuestPlugin, handling plugin initialization,
+ * event listeners, commands, config loading, and quest data management.
+ */
 
 public class QuestPlugin extends JavaPlugin {
 
+    /**
+     * Quest manager to handle quest assignment, progress, and completion.
+     */
     private QuestManager questManager;
-    private QuestLoader questLoader;
-    private QuestStorageManager questStorage;
-    private LeaderboardManager leaderboardManager;
-    private RarityRoller rarityRoller;
-    private Economy economy;
-    private boolean debugMode;
-    private BukkitAudiences adventure;
-    private QuestAssigner questAssigner;
-    private static QuestPlugin instance;
-    private QuestNotifier questNotifier;
-    private RewardHandler rewardHandler;
 
+    /**
+     * Quest loader to read and parse quest data from files.
+     */
+    private QuestLoader questLoader;
+
+    /**
+     * Quest storage manager to save and load player and global quest data.
+     */
+    private QuestStorageManager questStorage;
+
+    /**
+     * Leaderboard manager to handle player rankings based on quest completion.
+     */
+    private LeaderboardManager leaderboardManager;
+
+    /**
+     * Rarity roller for generating random rewards with weighted probabilities.
+     */
+    private RarityRoller rarityRoller;
+
+    /**
+     * Economy provider for handling coin rewards (using Vault).
+     */
+    private Economy economy;
+
+    /**
+     * Debug mode flag to enable/disable additional debug logging.
+     */
+    private boolean debugMode;
+
+    /**
+     * Adventure platform for advanced player messaging using Adventure framework.
+     */
+    private BukkitAudiences adventure;
+
+    /**
+     * Quest assigner to handle quest assignments and reassignment upon event triggers.
+     */
+    private QuestAssigner questAssigner;
+
+    /**
+     * Static instance of QuestPlugin for easy access within the plugin.
+     */
+    private static QuestPlugin instance;
+
+    /**
+     * Quest notifier to send messages to players about their quest progress.
+     */
+    private QuestNotifier questNotifier;
+
+    /**
+     * Reward handler to manage reward-related functionalities like generating rewards and applying them.
+     */
+    private RewardHandler rewardHandler;
 
     @Override
     public void onEnable() {
@@ -53,18 +95,22 @@ public class QuestPlugin extends JavaPlugin {
 
         loadQuestData();
 
-        setupScoreboard();
-
         log("QuestPlugin enabled.");
     }
 
-    public void loadConfig(){
+    /**
+     * Loads and saves the default config file, initializing debug mode.
+     */
+    public void loadConfig() {
         log("[Init] Loading configuration...");
         saveDefaultConfig();
         FileConfiguration config = getConfig();
         this.debugMode = config.getBoolean("Debug", false);
     }
 
+    /**
+     * Initializes various managers for quest data handling.
+     */
     public void setupAssignments() {
         log("[Init] Loading managers...");
         this.questLoader = new QuestLoader(this);
@@ -79,11 +125,9 @@ public class QuestPlugin extends JavaPlugin {
         instance = this;
     }
 
-    public void setupScoreboard(){
-        SidebarManager sidebarManager = UniversalScoreboard.get().getSidebarManager();
-        sidebarManager.registerSection(new QuestLeaderboardSection());
-    }
-
+    /**
+     * Registers event listeners for various in-game events.
+     */
     public void registerListeners() {
         log("[Init] Registering event listeners...");
         getServer().getPluginManager().registerEvents(new QuestGUI(this), this);
@@ -94,13 +138,19 @@ public class QuestPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(this), this);
     }
 
-    public void registerCommands(){
+    /**
+     * Registers commands for player interaction with QuestPlugin.
+     */
+    public void registerCommands() {
         log("[Init] Registering commands...");
         getCommand("questdev").setExecutor(new DevCommands(this));
         getCommand("quest").setExecutor(new QuestCommand(this));
     }
 
-    public void loadQuestData(){
+    /**
+     * Loads saved quest data and ensures initial quest assignments upon startup.
+     */
+    public void loadQuestData() {
         log("[Init] Loading saved quest data...");
         questStorage.loadIntoManager(questManager);
 
@@ -122,14 +172,29 @@ public class QuestPlugin extends JavaPlugin {
         log("QuestPlugin disabled.");
     }
 
+    /**
+     * Logs messages with the QuestPlugin prefix for better readability.
+     *
+     * @param message The message to log.
+     */
     public void log(String message) {
         getLogger().info(message);
     }
 
+    /**
+     * Logs debug messages if debugMode is enabled.
+     *
+     * @param message The debug message to potentially log.
+     */
     public void debug(String message) {
         if (debugMode) log("[DEBUG] " + message);
     }
 
+    /**
+     * Sets up the economy provider using Vault, returning false if not found or null.
+     *
+     * @return True if setup is successful; otherwise, false.
+     */
     private boolean setupEconomy() {
         if (getServer().getPluginManager().getPlugin("Vault") == null) {
             return false;
@@ -140,22 +205,122 @@ public class QuestPlugin extends JavaPlugin {
         return economy != null;
     }
 
+    /**
+     * Returns the Adventure platform instance for advanced player messaging.
+     *
+     * @return The BukkitAudiences instance.
+     */
     public BukkitAudiences adventure() {
         return adventure;
     }
 
-    public QuestManager getQuestManager() { return questManager; }
-    public QuestLoader getQuestLoader() { return questLoader; }
-    public QuestStorageManager getQuestStorage() { return questStorage; }
-    public LeaderboardManager getLeaderboardManager() { return leaderboardManager; }
-    public RarityRoller getRarityRoller() { return rarityRoller; }
-    public Economy getEconomy() { return economy; }
-    public AuraSkillsApi getAuraSkillsApi() { return AuraSkillsApi.get(); }
-    public boolean isDebugMode() { return debugMode; }
-    public QuestAssigner getQuestAssigner() { return questAssigner;}
-    public QuestNotifier getQuestNotifier() { return questNotifier;}
-    public RewardHandler getRewardHandler() { return rewardHandler; }
+    // Getters and setters for various managers and attributes
 
+    /**
+ * Gets the {@link QuestManager} responsible for managing all quests and their logic.
+ *
+ * @return the quest manager instance
+ */
+public QuestManager getQuestManager() {
+    return questManager;
+}
+
+/**
+ * Gets the {@link QuestLoader} responsible for loading quests from configuration files.
+ *
+ * @return the quest loader instance
+ */
+public QuestLoader getQuestLoader() {
+    return questLoader;
+}
+
+/**
+ * Gets the {@link QuestStorageManager} responsible for handling quest data storage and retrieval.
+ *
+ * @return the quest storage manager instance
+ */
+public QuestStorageManager getQuestStorage() {
+    return questStorage;
+}
+
+/**
+ * Gets the {@link LeaderboardManager} responsible for tracking and displaying player rankings.
+ *
+ * @return the leaderboard manager instance
+ */
+public LeaderboardManager getLeaderboardManager() {
+    return leaderboardManager;
+}
+
+/**
+ * Gets the {@link RarityRoller} used for rolling random rarities for generated quests.
+ *
+ * @return the rarity roller instance
+ */
+public RarityRoller getRarityRoller() {
+    return rarityRoller;
+}
+
+/**
+ * Gets the {@link Economy} instance used for handling in-game currency transactions.
+ *
+ * @return the economy provider instance
+ */
+public Economy getEconomy() {
+    return economy;
+}
+
+/**
+ * Gets the {@link AuraSkillsApi} instance used to interact with the AuraSkills plugin.
+ *
+ * @return the AuraSkills API instance
+ */
+public AuraSkillsApi getAuraSkillsApi() {
+    return AuraSkillsApi.get();
+}
+
+/**
+ * Checks whether debug mode is enabled for the plugin.
+ *
+ * @return true if debug mode is active, false otherwise
+ */
+public boolean isDebugMode() {
+    return debugMode;
+}
+
+/**
+ * Gets the {@link QuestAssigner} responsible for assigning quests to players.
+ *
+ * @return the quest assigner instance
+ */
+public QuestAssigner getQuestAssigner() {
+    return questAssigner;
+}
+
+/**
+ * Gets the {@link QuestNotifier} used to send notifications and updates about quests to players.
+ *
+ * @return the quest notifier instance
+ */
+public QuestNotifier getQuestNotifier() {
+    return questNotifier;
+}
+
+/**
+ * Gets the {@link RewardHandler} responsible for distributing rewards when quests are completed.
+ *
+ * @return the reward handler instance
+ */
+public RewardHandler getRewardHandler() {
+    return rewardHandler;
+}
+
+
+    /**
+     * Returns the static instance of QuestPlugin for easy access.
+     *
+     * @return The QuestPlugin instance.
+     */
     public static QuestPlugin getInstance() {
         return instance;
     }

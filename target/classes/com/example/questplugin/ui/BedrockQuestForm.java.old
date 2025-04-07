@@ -1,0 +1,130 @@
+package com.example.questplugin;
+
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
+import org.geysermc.geyser.api.GeyserApi;
+import org.geysermc.geyser.api.GeyserSession;
+import org.geysermc.geyser.api.form.SimpleForm;
+import org.geysermc.geyser.api.form.ModalForm;
+
+import java.util.List;
+
+public class BedrockQuestForm {
+
+    private final QuestPlugin plugin;
+    private final RewardHandler rewardHandler;
+
+    public BedrockQuestForm(QuestPlugin plugin) {
+        this.plugin = plugin;
+        this.rewardHandler = new RewardHandler(plugin);
+    }
+
+    public void open(Player player) {
+        openTierSelector(player);
+    }
+
+    public void openTierSelector(Player player) {
+        GeyserSession session = GeyserApi.api().sessionByUuid(player.getUniqueId());
+        if (session == null) return;
+
+        SimpleForm tierForm = SimpleForm.builder()
+            .title("§aSelect Quest Type")
+            .content("§7Choose a quest category")
+            .button("§a📅 Daily Quests")
+            .button("§9📆 Weekly Quests")
+            .button("§d🌍 Global Quests")
+            .build();
+
+        session.sendForm(tierForm, response -> {
+            if (response.isClosed()) return;
+            switch (response.clickedButtonId()) {
+                case 0 -> openList(player, QuestTier.DAILY);
+                case 1 -> openList(player, QuestTier.WEEKLY);
+                case 2 -> openList(player, QuestTier.GLOBAL);
+            }
+        });
+    }
+
+    public void openList(Player player, QuestTier tier) {
+        GeyserSession session = GeyserApi.api().sessionByUuid(player.getUniqueId());
+        if (session == null) return;
+
+        List<Quest> quests = plugin.getQuestManager().getQuestsForTier(player.getUniqueId(), tier);
+
+        String title = switch (tier) {
+            case DAILY -> "§a📅 Daily Quests";
+            case WEEKLY -> "§9📆 Weekly Quests";
+            case GLOBAL -> "§d🌍 Global Quests";
+        };
+
+        SimpleForm form = SimpleForm.builder()
+            .title(title)
+            .content("§7Tap a quest to view details");
+
+        for (Quest quest : quests) {
+            String progress = quest.isRewardClaimed() ? "§a✔ Claimed"
+                : quest.isCompleted() ? "§6🏆 Claimable"
+                : "§7⏳ In Progress";
+            form.button(quest.getRarity().getDisplayName() + "§r§e" + quest.getDescription() + " " + progress);
+        }
+
+        session.sendForm(form, formResponse -> {
+            if (formResponse.isClosed()) return;
+            int index = formResponse.clickedButtonId();
+            if (index < 0 || index >= quests.size()) return;
+            openDetailModal(player, quests.get(index), tier);
+        });
+    }
+
+    public void openDetailModal(Player player, Quest quest, QuestTier tier) {
+        GeyserSession session = GeyserApi.api().sessionByUuid(player.getUniqueId());
+        if (session == null) return;
+
+        boolean claimable = quest.canClaim();
+        String status = quest.isRewardClaimed() ? "§a✔ Reward Claimed"
+            : quest.isCompleted() ? "§6🏆 Reward Ready!"
+            : "§7⏳ In Progress";
+
+        String progressBar = getProgressBar((int) ((double) quest.getCurrentProgress() / quest.getTargetAmount() * 100));
+
+        String content = String.join(" ",
+            quest.getRarity().getDisplayName() + " §l" + quest.getDescription(),
+            "",
+            "§7Progress: §f" + quest.getCurrentProgress() + "§7 / §f" + quest.getTargetAmount(),
+            progressBar,
+            "",
+            "§bReward: §a" + quest.getCurrencyReward() + " coins",
+            "§dSkill Points: §5" + quest.getSkillPointReward(),
+            "",
+            "Status: " + status
+        );
+
+        ModalForm form = ModalForm.builder()
+            .title("§aQuest Details")
+            .content(content)
+            .button1(claimable ? "§a✅ Claim Reward" : "§7❌ Claim Disabled")
+            .button2("§cBack")
+            .build();
+
+        session.sendForm(form, formResponse -> {
+            if (formResponse.isClosed()) return;
+
+            if (formResponse.firstOption()) {
+                if (claimable) {
+                    rewardHandler.giveReward(player, quest);
+                    player.sendMessage(ChatColor.GREEN + "✔ Claimed reward for: " + quest.getDescription());
+                } else {
+                    player.sendMessage(ChatColor.RED + "❌ You cannot claim this reward yet.");
+                }
+            }
+
+            openList(player, tier);
+        });
+    }
+
+    private String getProgressBar(int percent) {
+        int bars = percent / 10;
+        return "§a" + "█".repeat(bars) + "§7" + "░".repeat(10 - bars) + " §f" + percent + "%";
+    }
+}

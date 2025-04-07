@@ -1,4 +1,8 @@
-// QuestManager with global quest persistence and saving support
+/**
+ * QuestManager handles quest assignments, resets, persistence, and loading for all quest tiers:
+ * DAILY, WEEKLY, and GLOBAL. It supports player-specific and shared global quests, saving progress,
+ * and ensuring quest limits are honored per configuration.
+ */
 package com.example.questplugin.managers;
 
 import java.io.File;
@@ -22,12 +26,19 @@ public class QuestManager {
     private final Map<UUID, List<Quest>> dailyQuests = new ConcurrentHashMap<>();
     private final Map<UUID, List<Quest>> weeklyQuests = new ConcurrentHashMap<>();
     private final List<Quest> globalQuests = new ArrayList<>();
+    private final Map<UUID, List<Quest>> playerGlobalQuests = new HashMap<>();
 
     private final File globalFile;
     private final FileConfiguration globalConfig;
+    private final File resetFile;
+    private final YamlConfiguration config;
+    private LocalDate lastResetDate;
 
-            private final Map<UUID, List<Quest>> playerGlobalQuests = new HashMap<>();
-
+    /**
+     * Constructs a new QuestManager and loads reset and global quest data from disk.
+     *
+     * @param plugin The main plugin instance.
+     */
     public QuestManager(QuestPlugin plugin) {
         this.plugin = plugin;
         this.globalFile = new File(plugin.getDataFolder(), "global_quests.yml");
@@ -52,6 +63,9 @@ public class QuestManager {
         this.lastResetDate = loadLastResetDate();
     }
 
+    /**
+     * Saves global quest progress and claim status to disk.
+     */
     public void saveGlobalQuests() {
         for (Quest quest : globalQuests) {
             String id = quest.getId();
@@ -66,10 +80,23 @@ public class QuestManager {
         plugin.debug("[Global] Saved global quests to file.");
     }
 
+    /**
+     * Gets a list of weekly quests for a given player UUID.
+     *
+     * @param uuid The player's UUID.
+     * @return List of weekly quests.
+     */
     public List<Quest> getPlayerWeeklyQuests(UUID uuid) {
         return weeklyQuests.getOrDefault(uuid, new ArrayList<>());
     }
 
+    /**
+     * Gets all quests for a specific tier for a player.
+     *
+     * @param uuid The player's UUID.
+     * @param tier The quest tier.
+     * @return List of quests for that tier.
+     */
     public List<Quest> getQuestsForTier(UUID uuid, QuestTier tier) {
         return switch (tier) {
             case DAILY -> dailyQuests.getOrDefault(uuid, new ArrayList<>());
@@ -86,25 +113,46 @@ public class QuestManager {
         };
     }
 
+    /**
+     * Returns all quests for a player across all types.
+     *
+     * @param uuid The player's UUID.
+     * @return List of all player quests.
+     */
     public List<Quest> getAllPlayerQuests(UUID uuid) {
         List<Quest> all = new ArrayList<>();
         all.addAll(getPlayerDailyQuests(uuid));
         all.addAll(getPlayerWeeklyQuests(uuid));
-        all.addAll(getGlobalQuests()); // include global quests too
+        all.addAll(getGlobalQuests());
         return all;
     }
 
-    public List<Quest> getPlayerQuests(UUID uuid){
+    /**
+     * Gets the combined daily and weekly quests for a player.
+     *
+     * @param uuid The player's UUID.
+     * @return List of player quests.
+     */
+    public List<Quest> getPlayerQuests(UUID uuid) {
         List<Quest> combinedQuests = new ArrayList<>();
         combinedQuests.addAll(dailyQuests.get(uuid));
         combinedQuests.addAll(weeklyQuests.get(uuid));
         return combinedQuests;
     }
 
+    /**
+     * Returns the daily quests assigned to a player.
+     *
+     * @param uuid The player's UUID.
+     * @return List of daily quests.
+     */
     public List<Quest> getPlayerDailyQuests(UUID uuid) {
         return dailyQuests.getOrDefault(uuid, new ArrayList<>());
     }
 
+    /**
+     * Ensures players have initial daily and weekly quests assigned.
+     */
     public void ensureInitialAssignments() {
         int dailyQuestCount = plugin.getConfig().getInt("QuestLimits.DAILY", 7);
         int weeklyQuestCount = plugin.getConfig().getInt("QuestLimits.WEEKLY", 7);
@@ -125,19 +173,23 @@ public class QuestManager {
         assignInitialGlobalQuests();
     }
 
-
     public void assignNewDailyQuests(UUID uuid, List<Quest> quests) {
-        dailyQuests.put(uuid, quests); // existing
+        dailyQuests.put(uuid, quests);
     }
 
     public void assignNewWeeklyQuests(UUID uuid, List<Quest> quests) {
-        weeklyQuests.put(uuid, quests); // existing
+        weeklyQuests.put(uuid, quests);
     }
 
     public void assignGlobalQuests(UUID uuid, List<Quest> quests) {
-        playerGlobalQuests.put(uuid, quests); // needed for GUI
+        playerGlobalQuests.put(uuid, quests);
     }
 
+    /**
+     * Gets all players that currently have quests.
+     *
+     * @return Set of player UUIDs.
+     */
     public Set<UUID> getAllPlayers() {
         Set<UUID> set = new HashSet<>();
         set.addAll(dailyQuests.keySet());
@@ -154,12 +206,11 @@ public class QuestManager {
         return globalQuests;
     }
 
-    private LocalDate lastResetDate;
-
-    private File resetFile;
-
-    private YamlConfiguration config;
-
+    /**
+     * Loads the last reset date from disk.
+     *
+     * @return Last reset date or yesterday if not found.
+     */
     private LocalDate loadLastResetDate() {
         String stored = config.getString("last_reset", null);
         if (stored != null) {
@@ -170,7 +221,11 @@ public class QuestManager {
         return LocalDate.now().minusDays(1);
     }
 
-
+    /**
+     * Saves the last reset date to file.
+     *
+     * @param date The date to save.
+     */
     private void saveLastResetDate(LocalDate date) {
         config.set("last_reset", date.toString());
         try {
@@ -180,6 +235,10 @@ public class QuestManager {
         }
     }
 
+    /**
+     * Checks whether quests need to be reset on startup.
+     * Performs daily and weekly resets as needed.
+     */
     public void checkResetOnStartup() {
         LocalDate today = LocalDate.now();
         plugin.debug("[Reset] Last reset: " + lastResetDate + ", Today: " + today);
@@ -196,6 +255,9 @@ public class QuestManager {
         }
     }
 
+    /**
+     * Resets daily quests for all players.
+     */
     public void performDailyReset() {
         Bukkit.getLogger().info("[QuestPlugin] Performing daily quest reset.");
     
@@ -209,10 +271,12 @@ public class QuestManager {
         plugin.getQuestStorage().save();
     }
 
+    /**
+     * Resets weekly quests for all players.
+     */
     public void performWeeklyReset() {
         Bukkit.getLogger().info("[QuestPlugin] Performing weekly quest reset.");
     
-        // Now reset weekly quests for players
         for (UUID uuid : plugin.getQuestManager().getAllPlayers()) {
             List<Quest> weekly = plugin.getQuestAssigner().assignWeeklyQuests(uuid);
             List<Quest> daily = plugin.getQuestManager().getPlayerDailyQuests(uuid);
@@ -224,23 +288,22 @@ public class QuestManager {
         Bukkit.getLogger().info("[QuestPlugin] Weekly reset complete.");
     }
 
+    /**
+     * Refreshes global quests by removing completed ones and adding new ones up to the limit.
+     */
     public void refreshGlobalQuests() {
-        // Reset global quests that are completed
         List<Quest> currentGlobal = plugin.getQuestManager().getGlobalQuests();
         int globalLimit = plugin.getConfig().getInt("QuestLimits.GLOBAL", 10);
         List<Quest> newGlobals = new ArrayList<>(currentGlobal);
     
         List<QuestTemplate> allGlobalTemplates = plugin.getQuestLoader().getTemplatesByTier(QuestTier.GLOBAL);
         Set<String> usedIds = currentGlobal.stream()
-            .filter(q -> !q.isCompleted()) // preserve incomplete ones
+            .filter(q -> !q.isCompleted())
             .map(Quest::getId)
             .collect(Collectors.toSet());
     
-        // Remove completed ones
         newGlobals.removeIf(Quest::isCompleted);
     
-        // Fill back up to the limit
-
         List<QuestTemplate> available = new ArrayList<>(
             allGlobalTemplates.stream()
                 .filter(template -> !usedIds.contains(template.getId()))
@@ -255,11 +318,20 @@ public class QuestManager {
         plugin.getQuestManager().setGlobalQuests(newGlobals);
     }
 
+    /**
+     * Assigns initial global quests if none exist.
+     */
     public void assignInitialGlobalQuests() {
         if (!globalQuests.isEmpty()) return;
         refreshGlobalQuests();
     }
 
+    /**
+     * Adds a development/test quest directly to a player.
+     *
+     * @param uuid  The player's UUID.
+     * @param quest The quest to add.
+     */
     public void giveDevQuest(UUID uuid, Quest quest) {
         List<Quest> existing = plugin.getQuestManager().getPlayerDailyQuests(uuid);
         boolean alreadyHas = existing.stream().anyMatch(q -> q.getId().equalsIgnoreCase(quest.getId()));

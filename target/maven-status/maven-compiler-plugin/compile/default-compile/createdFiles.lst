@@ -1,3 +1,4 @@
+com\example\questplugin\util\QuestFilter$2.class
 com\example\questplugin\commands\DevCommands.class
 com\example\questplugin\util\RarityRoller$1.class
 com\example\questplugin\model\QuestType.class
@@ -12,7 +13,6 @@ com\example\questplugin\model\QuestTier.class
 com\example\questplugin\managers\QuestLoader.class
 com\example\questplugin\managers\LeaderboardManager$1.class
 com\example\questplugin\util\QuestFilter.class
-com\example\questplugin\model\QuestLeaderboardSection.class
 com\example\questplugin\managers\LeaderboardManager.class
 com\example\questplugin\util\BedrockHelper.class
 com\example\questplugin\managers\QuestStorageManager.class
@@ -22,6 +22,7 @@ com\example\questplugin\ui\QuestGUI.class
 com\example\questplugin\Listeners\BaseListener.class
 com\example\questplugin\commands\QuestCommand.class
 com\example\questplugin\model\QuestTemplate.class
+com\example\questplugin\util\QuestFilter$1.class
 com\example\questplugin\managers\QuestStorageManager$PlayerQuestData.class
 com\example\questplugin\model\QuestTemplate$Objective.class
 com\example\questplugin\util\EntityCategoryMatcher.class
@@ -32,4 +33,5 @@ com\example\questplugin\managers\QuestAssigner$1.class
 com\example\questplugin\managers\RewardHandler.class
 com\example\questplugin\Listeners\MobKillListener.class
 com\example\questplugin\util\RarityRoller.class
+com\example\questplugin\util\QuestFilter$3.class
 com\example\questplugin\Listeners\PlayerJoinListener.class
