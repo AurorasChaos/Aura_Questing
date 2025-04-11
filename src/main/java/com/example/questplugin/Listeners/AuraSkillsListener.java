@@ -1,7 +1,6 @@
 package com.example.questplugin.Listeners;
 
 import com.example.questplugin.*;
-import com.example.questplugin.model.Quest;
 import com.example.questplugin.model.QuestType;
 import dev.aurelium.auraskills.api.event.skill.SkillLevelUpEvent;
 import dev.aurelium.auraskills.api.event.skill.XpGainEvent;

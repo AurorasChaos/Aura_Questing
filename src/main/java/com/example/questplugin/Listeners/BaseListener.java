@@ -5,12 +5,10 @@ import com.example.questplugin.managers.QuestManager;
 import com.example.questplugin.managers.RewardHandler;
 import com.example.questplugin.model.Quest;
 import com.example.questplugin.model.QuestTemplate;
-import com.example.questplugin.model.QuestTier;
 import com.example.questplugin.model.QuestType;
 
 import org.bukkit.entity.Player;
 
-import java.util.List;
 
 public abstract class BaseListener {
 

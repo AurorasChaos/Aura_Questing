@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.example.questplugin"},{"l":"com.example.questplugin.commands"},{"l":"com.example.questplugin.Listeners"},{"l":"com.example.questplugin.managers"},{"l":"com.example.questplugin.model"},{"l":"com.example.questplugin.ui"},{"l":"com.example.questplugin.util"}];updateSearchResults();
