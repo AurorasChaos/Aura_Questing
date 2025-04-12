@@ -22,6 +22,8 @@ import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 
 public class QuestPlugin extends JavaPlugin {
 
+    private QuestCompletionConfig questCompletionConfig;
+
     /**
      * Quest manager to handle quest assignment, progress, and completion.
      */
@@ -82,6 +84,8 @@ public class QuestPlugin extends JavaPlugin {
      */
     private RewardHandler rewardHandler;
 
+    private QuestCompletionListener questCompletionListener;
+
     @Override
     public void onEnable() {
         loadConfig();
@@ -106,6 +110,14 @@ public class QuestPlugin extends JavaPlugin {
         saveDefaultConfig();
         FileConfiguration config = getConfig();
         this.debugMode = config.getBoolean("Debug", false);
+
+        try {
+            questCompletionConfig = new QuestCompletionConfig(this);
+            debug("Quest completion loaded succesfully");
+        } catch (Exception e) {
+            getLogger().severe("Falied to load quest completion file");
+        }
+
     }
 
     /**
@@ -122,6 +134,7 @@ public class QuestPlugin extends JavaPlugin {
         this.questAssigner = new QuestAssigner(this);
         this.questNotifier = new QuestNotifier(this);
         this.rewardHandler = new RewardHandler(this);
+        this.questCompletionListener = new QuestCompletionListener();
         instance = this;
     }
 
@@ -136,6 +149,7 @@ public class QuestPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new LifeEventsListener(this), this);
         getServer().getPluginManager().registerEvents(new AuraSkillsListener(this), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(this), this);
+        getServer().getPluginManager().registerEvents(new QuestCompletionListener(), this);
     }
 
     /**
@@ -323,5 +337,13 @@ public RewardHandler getRewardHandler() {
      */
     public static QuestPlugin getInstance() {
         return instance;
+    }
+
+    public QuestCompletionListener getQuestCompletionListener(){
+        return questCompletionListener;
+    }
+
+    public QuestCompletionConfig getCompletionConfig() {
+        return questCompletionConfig;
     }
 }

@@ -4,7 +4,9 @@
  */
 package com.example.questplugin.Listeners;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import com.example.questplugin.QuestPlugin;
@@ -12,19 +14,21 @@ import com.example.questplugin.model.Quest;
 import com.example.questplugin.model.QuestType;
 
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Biome;
-import org.bukkit.block.BrewingStand;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.enchantment.EnchantItemEvent;
 import org.bukkit.event.entity.EntityBreedEvent;
 import org.bukkit.event.entity.EntityTameEvent;
-import org.bukkit.event.inventory.BrewEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 public class LifeEventsListener extends BaseListener implements Listener {
 
@@ -111,44 +115,93 @@ public class LifeEventsListener extends BaseListener implements Listener {
      *
      * @param event The inventory click event.
      */
-    @EventHandler
-    public void onInventoryClick(InventoryClickEvent event) {
-        if (!(event.getWhoClicked() instanceof Player player)) return;
-
-        if (event.getInventory().getType() == InventoryType.MERCHANT) {
-            plugin.debug(player.getName() + " interacted with a Villager trade.");
-
-            String target = "VILLAGER";
-            int slot = event.getRawSlot();
-            if (slot == 2 && event.getCurrentItem() != null) {
-                plugin.debug(player.getName() + " completed a trade!");
-                handleQuestTypeAndTarget(QuestType.TRADE, target, player);
-            }
+@EventHandler
+public void onInventoryClick(InventoryClickEvent event) {
+    if (!(event.getWhoClicked() instanceof Player player)) return;
+    
+    // Handle Villager trading first as in original code
+    if (event.getInventory().getType() == InventoryType.MERCHANT) {
+        plugin.debug(player.getName() + " interacted with a Villager trade.");
+        String target = "VILLAGER";
+        int slot = event.getRawSlot();
+        
+        if (slot == 2 && event.getCurrentItem() != null) {
+            plugin.debug(player.getName() + " completed a trade!");
+            handleQuestTypeAndTarget(QuestType.TRADE, target, player);
+        }
+    } 
+    // Add Brewing Stand logic
+    else if (event.getInventory().getType() == InventoryType.BREWING) {
+        plugin.debug(player.getName() + " interacted with a Brewing Stand.");
+        
+        ItemStack[] contents = event.getInventory().getContents();
+        String target;
+        
+        if (isPotionCraft(contents)) {
+            target = "BREW_POTION";
+            plugin.debug(player.getName() + " successfully brewed a potion!");
+            handleQuestTypeAndTarget(QuestType.BREW_ITEM, target, player);
         }
     }
+}
 
-    /**
-     * Triggered when brewing finishes. Currently unused and needs fixing.
-     *
-     * @param event The brewing event.
-     */
-    @EventHandler
-    public void onBrew(BrewEvent event) {
-        if (!(event.getBlock().getState() instanceof BrewingStand)) return;
-        // TODO: Fix brewing quest implementation
+private boolean isPotionCraft(ItemStack[] contents) {
+    // Check ingredient slot (slot 0)
+    ItemStack ingredient = contents[0];
+    
+    if (ingredient != null && isValidBrewable(ingredient.getType())) {
+        // Check brew output slot (slot 1)
+        ItemStack output = contents[1];
+        
+        return output != null && !output.getType().equals(Material.AIR);
     }
+    return false;
+}
 
-    /**
-     * Triggered when a player enchants an item.
-     *
-     * @param event The enchantment event.
-     */
-    @EventHandler
-    public void onEnchant(EnchantItemEvent event) {
-        Player player = event.getEnchanter();
-        handleQuestTypeAndTarget(QuestType.ENCHANT_ITEM, "", player);
-        // TODO: Verify enchantment logic works correctly
+
+private boolean isValidBrewable(Material material) {
+    // Return true for materials that can be used in potion brewing
+    return Arrays.asList(
+            Material.REDSTONE,
+            Material.FERMENTED_SPIDER_EYE,
+            Material.GHAST_TEAR,
+            Material.MAGMA_CREAM,
+            Material.INK_SAC,
+            Material.SUGAR,
+            Material.RABBIT_FOOT,
+            Material.POTION,  // For brewing enhancements
+            Material.GLISTERING_MELON_SLICE
+    ).contains(material);
+}
+
+/**
+* Triggered when a player enchants an item.
+*
+* @param event The enchantment event.
+*/
+@EventHandler
+public void onEnchant(EnchantItemEvent event) {
+    if (!(event.getEnchanter() instanceof Player)) return;
+    
+    Player player = (Player) event.getEnchanter();
+    
+    // Use the item that will be enchanted
+    ItemStack itemToEnchant = event.getItem().clone();
+    
+    ItemMeta meta = itemToEnchant.getItemMeta();
+
+    if (meta != null && meta.hasEnchants()) {
+        Map<Enchantment, Integer> enchantments = meta.getEnchants();
+        
+        for (Map.Entry<Enchantment, Integer> entry : enchantments.entrySet()) {
+            String enchantmentKey = 
+                entry.getKey().getKey() + "_" +
+                entry.getValue();
+                
+            handleQuestTypeAndTarget(QuestType.ENCHANT_ITEM, enchantmentKey, player);
+        }
     }
+}
 
     /**
      * Triggered when a player consumes an item.

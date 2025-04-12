@@ -22,6 +22,10 @@ commands:
     description: Opens your quest menu
     usage: /quest
     permission: questplugin.use
+  questcompletions:
+    description: Allows you to check quest completion rates
+    usage: /questcompletion <quest_id>
+    permission: questplugin.examine
 permissions:
   questplugin.dev:
     description: Allows access to developer commands
@@ -29,3 +33,7 @@ permissions:
   questplugin.admin:
     description: Allows reloading and admin-level commands
     default: op
+  questplugin.notify:
+    description: Allows players to receive notifications about completed quests.
+  questplugin.examine:
+    description: Allows players to examine quest completion data.

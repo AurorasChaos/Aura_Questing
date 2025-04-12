@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.bukkit.Bukkit;
+
+import com.example.questplugin.events.QuestCompleteEvent;
+
 /**
  * Represents a quest that can be completed by a player.
  */
@@ -231,6 +235,7 @@ public class Quest {
      */
     public void claimReward() {
         this.rewardClaimed = true;
+        Bukkit.getServer().getPluginManager().callEvent(new QuestCompleteEvent(Bukkit.getPlayer(playerUUID), this));
     }
 
     /**
