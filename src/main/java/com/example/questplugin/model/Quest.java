@@ -29,7 +29,7 @@ public class Quest {
     private final double currencyReward;
 
     /**
-     * The tier of the quest, indicating its difficulty or level.
+     * The tier of the quest, indicating if it's DAILY, WEEKLY or GLOBAL.
      */
     private final QuestTier tier;
 
